@@ -1,0 +1,121 @@
+.content {
+  width: 80%;
+  margin: 0px auto !important;
+  margin-top: 160px !important;
+  background-color: white;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.codeBox {
+  margin-top: -13px;
+  text-align: left;
+  background-color: white;
+  color: black;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+  overflow-wrap: break-word;
+}
+
+.codeBox xmp {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent strong {
+  margin-bottom: 10px !important;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 2 !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0px auto !important;
+  padding: 5px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  /* border: 2px solid red; */
+}
+
+.fixed .heading {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  line-height: 2px;
+  margin-bottom: 10px;
+}
+
+.fixed .heading .icon a i {
+  font-size: 30px;
+  cursor: pointer;
+  color: rgba(29, 19, 19, 0.616);
+}
+
+.fixed .tab {
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  background-color: #f1f1f1;
+  margin-bottom: 0px !important;
+  z-index: 2 !important;
+}
+
+.fixed .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.fixed .tab button:hover {
+  background-color: #ddd;
+}
+
+.fixed .tab button.active {
+  background-color: #ccc;
+}
+/*# sourceMappingURL=style.css.map */

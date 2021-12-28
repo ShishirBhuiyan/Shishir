@@ -1,0 +1,3320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fontawesome Local css link -->
+    <link rel="stylesheet" href="Asset/css/style.css">
+
+    <link rel="stylesheet" href="Asset/css/adminlte.min.css">
+    
+    <link rel="stylesheet" href="Asset/plug/all.min.css">
+    
+    
+    <title>Silencer | Shishir</title>
+
+    
+</head>
+<body>
+    
+
+  <div class="fixed">
+    <div class="heading">
+        <div class="title">
+            <h1>Shishir Bhuiyan</h1>
+            <p>Patuakhali Science And Technology University</p>
+            <p><span>BSC (Eng) In CSE, Dhaka- Bangladesh</span></p>
+        </div>
+        <div class="icon">
+            <a href="https://github.com/ShishirBhuiyan" target="_blank">
+                 <i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'php')">PHP</button>
+        <button class="tablinks" onclick="openCity(event, 'laravel')">Laravel</button>
+        <button class="tablinks active" onclick="openCity(event, 'livewire')">Livewire</button>
+        <button class="tablinks" onclick="openCity(event, 'reactjs')">REACT JS</button>
+        <button class="tablinks" onclick="openCity(event, 'intalation')">Instalation</button>
+        <button class="tablinks" onclick="openCity(event, 'login')">
+            <i class="fas fa-user-shield"></i>
+            Login
+        </button>
+    </div> 
+  </div>
+  
+  <!--🌸 Livewire -->
+  <div id="livewire" class="content tabcontent" style="display: block;">
+        <p style="margin-bottom: 15px !important;
+        margin-left: 10px;"><strong >Shishir | Livewire</strong></p>
+
+        <!-- 🌸Dynamic Title Showing -->
+        <div class="card  collapsed-card p-0">
+          <div class="card-header">
+              <a class="card-title text-dark">🌸Dynamic Title Showing</a>
+      
+              <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                  </button>
+              </div>
+          </div>
+          <div class="card-body" style="display: none;">
+              <div class="laravel-playground" data-theme="dark" data-filename="app.blde.php" data-playground="eafc699b-841f-446b-ba05-6f6fe091ec5b" data-readonly="true" data-hide-result="true" ></div>
+          </div>
+        </div>
+        
+        <!-- 🌸Dynamic CSS & JS -->
+        <div class="card  collapsed-card p-0">
+          <div class="card-header">
+              <a class="card-title text-dark">🌸Dynamic CSS & JS</a>
+      
+              <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                  </button>
+              </div>
+          </div>
+          <div class="card-body" style="display: none;">
+            <div class="laravel-playground" data-theme="light" data-filename="component.blade.php" data-readonly="true" data-hide-result="true" ><pre data-filename="index.php">&lt;?php
+
+              Route::get(&#39;/&#39;, function() {
+                  return view(&#39;playground&#39;, [
+                      &#39;title&#39; =&gt; &#39;Dynamic CSS &amp; JS&#39;,
+                  ]);
+              });</pre>
+              <pre data-filename="playground.blade.php">
+              
+              &lt;html&gt;
+                  &lt;head&gt;
+                      {{-- All css resource stored there --}}
+                      @stack(&#39;styles&#39;)
+                  &lt;/head&gt;
+                  &lt;body&gt;
+              
+              
+              
+                      {{-- All js resources stored there --}}
+                      @stack(&#39;scripts&#39;)
+                  &lt;/body&gt;
+              &lt;/html&gt;
+              </pre>
+              <pre data-filename="component.blade.php">
+              @push(&#39;styles&#39;)
+                 &lt;style&gt;
+                     /* Write your css here */
+                 &lt;/style&gt;
+              @endpush
+              
+              
+              @push(&#39;scripts&#39;)
+                 &lt;style&gt;
+                     /* Write your js here */
+                 &lt;/style&gt;
+              @endpush</pre>
+              </div>
+          </div>
+        </div>
+
+        <!-- 🌸Route -->
+        <div class="card  collapsed-card p-0">
+          <div class="card-header">
+              <a class="card-title text-dark">🌸Route</a>
+      
+              <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                  </button>
+              </div>
+          </div>
+          <div class="card-body" style="display: none;">
+            <div class="laravel-playground" data-theme="light" data-filename="Route with invok meathoad.php" data-hide-result="true" ><pre data-filename="index.php">&lt;?php
+
+              Route::get(&#39;/&#39;, function() {
+                  return view(&#39;playground&#39;, [
+                      &#39;title&#39; =&gt; &#39;Laravel Playground&#39;,
+                  ]);
+              });</pre>
+              <pre data-filename="Route with invok meathoad.php">
+              // Name r Route with invok meathoad 
+              Route::get(&#39;admin/dashboard&#39;, DashboardController::class)-&gt;name(&#39;admin.dashboard&#39;);
+              </pre>
+              <pre data-filename="check link active or not.blade.php">
+              
+              // check request link and route link is same or not.If same, add a active class in this element otherwise not
+              &lt;a href=&quot;{{ route(&#39;admin.dashboard&#39;) }}&quot; class=&quot;nav-link {{ request()-&gt;is(&#39;admin/dashboard&#39;) ? &#39;active&#39;: &#39;&#39; }}&quot;&gt;Dashboard&lt;/a&gt;</pre>
+              </div> 
+          </div>
+        </div>
+        
+        <!-- 🌸Csrf-Token -->
+        <div class="card  collapsed-card p-0">
+          <div class="card-header">
+              <a class="card-title text-dark">🌸Csrf-Token</a>
+      
+              <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                  </button>
+              </div>
+          </div>
+          <div class="card-body" style="display: none;">
+              <div class="laravel-playground" data-theme="light" data-filename="playground.blade.php" data-hide-result="true" ><pre data-filename="see.blade.php">
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html&gt;
+                  &lt;head&gt;
+                  
+                   // Use csrf token as a mete tag
+                   &lt;meta name=&quot;csrf-token&quot; content=&quot;{{ csrf_token() }}&quot; /&gt;
+                  
+                  &lt;/head&gt;
+                  &lt;body
+                  
+                  
+                  &lt;/body&gt;
+                  &lt;/html&gt;
+                  
+                  </pre>
+                  </div>
+          </div>
+        </div>
+        
+        <!-- 🌸Dynamic component Showing -->
+        <div class="card  collapsed-card p-0">
+          <div class="card-header">
+              <a class="card-title text-dark">🌸Dynamic component Showing</a>
+      
+              <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                  </button>
+              </div>
+          </div>
+          <div class="card-body" style="display: none;">
+              <div class="laravel-playground" data-theme="light" data-filename="main.blade.php" data-hide-result="true" ><pre data-filename="main.blade.php">
+                  &lt;body&gt;
+                      {{ $slot }}  
+                  &lt;/body&gt;</pre>
+                  <pre data-filename="component.blade.php">
+      
+                  &lt;x-admin-layout&gt;
+                      &lt;div&gt;
+                          &lt;!-- Write here component code And this is show its related {{ $slot }} 
+                          property. And that was defiend by your service probider --&gt;
+                      &lt;/div&gt;
+                  &lt;/x-admin-layout&gt;</pre>
+                  </div>
+          </div>
+        </div>
+
+        
+        <!-- 🌸Controller -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <h3 class="card-title">🌸Controller</h3>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li><a href="">Create Controller</a> :  
+                        <div class="codeBox">
+                            <xmp>
+                                php artisan make:controller Admin/DashboardController --invokable
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- 🌸Install Livewire -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <h3 class="card-title">🌸Install Livewire</h3>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li><a href="">Install Livewire</a> :  
+                        <div class="codeBox">
+                            <xmp>
+                                composer require livewire/livewire
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Master Blade Layout Setup -->
+        <div class="card  collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/fe5ac03038f388119ee28d30b04ad8b1e263d701">🌸Master Blade Layout Setup</a>
+
+                <strong>17/12/2021</strong>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        Here we create master layout setup.Download this repository to start your project.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- 🌸Fortify Login System -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="">🌸Fortify Login System</a>
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>Install Package :  
+                        <div class="codeBox">
+                            <xmp>
+                                composer require laravel/fortify
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>Publish Fortify : 
+                        <div class="codeBox">
+                            <xmp>
+                                    php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>Mgrate : 
+                        <div class="codeBox">
+                            <xmp>
+                                php artisan migrate
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>Add Fortify Service Provider (app/config/app.php) providers array :  
+                        <div class="codeBox">
+                            <xmp>    
+                                    App\Providers\FortifyServiceProvider::class,
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>Then go to (app/Providers/FortifyServiceProvider.php) :
+                        <div class="codeBox">
+                            <xmp>
+                                public function boot()
+                                {
+                                    Fortify::loginView(function () {
+                                        return view('auth.login');
+                                    });
+                                }
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>       
+        
+        <!-- 🌸ServiceProvider -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <h3 class="card-title">🌸ServiceProvider</h3>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a href="">Create Service Provider</a> :  
+                        <div class="codeBox">
+                            <xmp>
+                                php artisan make:provider BladeComponentServiceProvider
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">Using Laravel Blade Component Instead of extends Directive</a> <br>
+                        এখানে লারাবেল ব্লেড এপ্রোচ কে কম্পোনেন্ট এ্যাপ্রোচ এ পরিবর্তন করা হয়েছে। যেখানে উল্লেখ করে দেয়া আছে যে কোন ব্লেড ফাইলকে কিভাবে কিসের মাধ্যমে  কম্পোনেন্ট আকারে ব্যাবহার করা যাবে।এজন্য প্রথমে আপনাকে একটি সার্ভিস প্রোবাইডার তৈরি করে, তার মধ্যে প্রসেসটাকে রেজিস্টার করতে হবে এবং তৈরিকৃত সার্ভিস প্রোবাইডার কে অবশ্যই (app/config/app.php) providers array তে যুক্ত করতে হবে:   
+                        <div class="codeBox">
+                            <xmp>
+                                public function register()
+                                {
+                                    
+                                    Blade::component('layouts.app', 'admin-layout');
+                                }
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 🌸Form Validation with error message -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/3926f439b3dc00762cbbd564411b80cf0f1e279d" class="card-title">🌸Form Validation with error message</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <div class="laravel-playground" data-theme="dark" data-filename="class.php" data-hide-result="true" ><pre data-filename="component.blade.php">&lt;input type=&quot;text&quot; wire:model.defer=&quot;ArrayForUserInputFieldValue.name&quot; class=&quot;form-control @error(&#39;name&#39;) is-invalid  @enderror&quot; id=&quot;name&quot; placeholder=&quot;Enter your name&quot;&gt;
+                    @error(&#39;name&#39;) &lt;div class=&quot;invalid-feedback&quot;&gt;{{ $message }}&lt;/div&gt; @enderror</pre>
+                    <pre data-filename="class.php">      
+                          use Illuminate\Support\Facades\Validator;
+                          
+                          $validatedData = Validator::make($this-&gt;ArrayForUserInputFieldValue,[
+                            &#39;name&#39; =&gt; &#39;required&#39;,
+                            &#39;email&#39; =&gt; &#39;required|email|unique:users&#39;,
+                            &#39;password&#39; =&gt; &#39;required|confirmed&#39;
+                          ])-&gt;validate();</pre>
+                    </div>
+            </div>
+        </div>
+   
+        
+        <!-- 🌸Create Livewire Component -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a class="card-title">🌸Create Livewire Component</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        This command create two file.One is class file & another is view file :  
+                        <div class="codeBox">
+                            <xmp>
+                                👉 php artisan make:livewire admin/users/list-user
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            
+        
+        <!-- 🌸Livewire Click Event -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/a34b56a91661cd1bd1b38cc57c1f9b7857173d3e" class="card-title">🌸Livewire Click Event </a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <p>make a click from blade file.Secondly proces this event from class file.Finally listen this evet again from blade file using javascript</p>
+                <div class="laravel-playground" data-theme="dark" data-filename="index.php" data-hide-result="true" ><pre data-filename="index.php">   
+   
+   
+                    public function openAddUserModal()
+                    {
+                       $this-&gt;dispatchBrowserEvent(&#39;AddUserModalOpen&#39;);
+                    }</pre>
+                <pre data-filename="playground.blade.php">First : &lt;button class=&quot;btn btn-dark&quot; wire:click.prevent=&quot;openAddUserModal&quot;&gt;
+                
+                
+                
+                &lt;div class=&quot;modal fade&quot; id=&quot;addUserForm&quot; tabindex=&quot;-1&quot; wire:ignore.self&gt;
+                    &lt;div class=&quot;modal-dialog&quot;&gt;
+                            &lt;div class=&quot;modal-content&quot;&gt;
+                                &lt;div class=&quot;card&quot;&gt;
+                                    &lt;div class=&quot;card-body&quot;&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                
+                
+                
+                &lt;script&gt;
+                    window.addEventListener(&#39;AddUserModalOpen&#39;, event =&gt;{
+                        $(&#39;#addUserForm&#39;).modal(&#39;show&#39;);
+                    });
+                &lt;/script&gt;</pre>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Wire:model -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <h3 class="card-title">🌸Wire:model</h3>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a> wire_model="",wire_model_defer="" are use for pass input field value from blade file to class file.For every input typing this wire_model="" create a ajax request.If you type 50 times it create 50 ajax request.But wire_model_defer="" only create one ajax request when you submit the form</a>
+                        <div class="codeBox">
+                            <xmp>
+                                👇👇
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="codeBox">
+                            <xmp>
+                                wire:model="name"
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>  
+                        <div class="codeBox">
+                            <xmp>
+                                wire:model.defer="name"
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- 🌸Wire:ignore -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <h3 class="card-title">🌸Wire:ignore</h3>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a> (wire:ignore,wire:ignore.self) prevent them to change, when every dom are re randerd by ajax request. But (wire:ignore) ignore this & this children dom property.Thatswhy when sensetive dom element (form)  is a children where (wire:ignore) are use, this also ignore form submit.So form not working properly. On the other hand (wire:ignore.self) only ignore self.Thatswhay it can't any impect its child dom element.</a>
+                        <div class="codeBox">
+                            <xmp>
+                                👇👇
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="codeBox">
+                            <xmp>
+                                <div class="modal fade" wire:ignore.self>
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <form>
+                                                </form>                       
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            
+        
+        <!-- 🌸Get input field value -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/1f51071b35b17833efb62d1a042fb3d777995ad0" class="card-title">🌸Get input field value</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li> 
+                        <div class="codeBox">
+                            <xmp>
+                                <note>input field</note>
+                                    wire:model.defer="name"
+        
+                                <note>access form class file</note>
+                                    public $name;
+                            </xmp>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="codeBox">
+                            <xmp>
+                                <note>input field</note>
+                                    wire:model.defer="state.name"
+                                    wire:model.defer="state.email"
+        
+                                <note>access form class file</note>
+                                    public $state = [];
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+
+            
+        <!-- 🌸Pasword hassing management -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a class="card-title">🌸Pasword hassing management </a>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a>First validate password then hash the password</a> :  
+                        <div class="codeBox">
+                            <xmp>
+                                $validatedData = Validator::make($this->state,[
+                                'password' => 'required|confirmed'
+                                ])->validate();
+                        
+                                $validatedData['password'] = bcrypt( $validatedData['password']);
+
+                                or
+
+                                $hash = password_hash($validatedData['password'], PASSWORD_DEFAULT);
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>check database password & inserted password is match or not</a> :  
+                        <div class="codeBox">
+                            <xmp>     
+
+                                $verify = password_verify($insertPassword, $hashDatabasePassword);
+                        
+                                if($verify){
+                                dd("Same Password");
+                                }
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Flsh Message -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/dbe955f481631881c6ee5d0aeb421553109568fd" target="_blank" class="card-title">🌸Flsh Message</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a href="">Class File</a> :  
+                        <div class="codeBox">
+                            <xmp>    
+                                
+                                public function createUser()
+                                {
+                                   session()->flash('message', 'User added successfully 😁'); 
+                            
+                                }
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">Blade File</a> :  
+                        <div class="codeBox">
+                            <xmp> 
+                                <div class="card-body">
+                                    
+                                     <div>
+                                        @if (session()->has('message'))
+                                        <div class="alert alert-warning alert-dismissible fade show mb-2" role="alert">
+                                            <strong>{{ session('message') }}</strong> 
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- 🌸Close Modal when form submitted -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/33c3c9ddeed50cc61ae449c84d483d6fcd0ec499" target="_blank" class="card-title">🌸Close Modal when form submitted</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a href="">Class File</a> :  
+                        <div class="codeBox">
+                            <xmp>    
+                                
+                                public function createUser()
+                                {
+                                    $this->dispatchBrowserEvent('AddUserModalClose',['message'=>'User added successfully']); 
+                            
+                                }
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">Blade File</a> :  
+                        <div class="codeBox">
+                            <xmp> 
+                                <script>
+                                    // Modal close when form is submitted
+                                    window.addEventListener('AddUserModalClose', event =>{
+                                            $('#addUserForm').modal('hide');
+                                    });
+                                </script>
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Toast message alert -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/58f473e92bc013c1f8739ad3e7ca366ca6ee6364" target="_blank" class="card-title">🌸Toast message alert</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a href="">CDN Link</a> :  
+                        <div class="codeBox">
+                            <xmp>  
+                                {{-- For Tostar Message css Cdn Link--}}
+                                <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
+
+                                
+                                {{-- For Tostar Message Js cdn link--}}
+                                <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://codeseven.github.io/toastr/demo.html">For Configuration</a> :  
+                        <div class="codeBox">
+                            <xmp> 
+                                <script>
+                                    toastr.options = {
+                                      "closeButton": true,
+                                      "debug": false,
+                                      "newestOnTop": true,
+                                      "progressBar": true,
+                                      "positionClass": "toast-top-right",
+                                      "preventDuplicates": false,
+                                      "onclick": null,
+                                      "showDuration": "300",
+                                      "hideDuration": "1000",
+                                      "timeOut": "5000",
+                                      "extendedTimeOut": "1000",
+                                      "showEasing": "swing",
+                                      "hideEasing": "linear",
+                                      "showMethod": "fadeIn",
+                                      "hideMethod": "fadeOut"
+                                    }
+                                  </script>
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a >Create Browser Event</a> :  
+                        <div class="codeBox">
+                            <xmp>  
+                                public function createUser()
+                                {
+                                  // Pass message for alert
+                                  $this->dispatchBrowserEvent('AddUserModalClose',['message'=>'User added successfully']);
+                            
+                                }
+                            </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a >Listen Browser Event</a> :  
+                        <div class="codeBox">
+                            <xmp>  
+                                <script>
+                                window.addEventListener('AddUserModalClose', event =>{
+                                        $('#addUserForm').modal('hide');
+
+                                    // Show toast notification alert
+                                    toastr.success(event.detail.message, 'Success!');
+                                });
+                                </script>
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 🌸Terminal Error -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <h3 class="card-title">🌸Terminal Error</h3>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=Y5lRWyDfnE4">🌸Fatal error: Uncaught Error: Failed opening required 'C:\Users\ASUS\Desktop\Github\Livewire/vendor/autoload.php</a> :  
+                        <div class="codeBox">
+                            <xmp>
+                                composer update
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Reset Form -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <h3 class="card-title">🌸Reset Form</h3>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li><a href="https://github.com/ShishirBhuiyan/Livewire/commit/9f5022d0f88785ed9e09cf6c6c962ff473fb8bd3">🌸Rset form when again form modal is open</a> :  
+                        <div class="codeBox">
+                            <xmp>    
+                                public function openAddUserModal()
+                                {    
+                                  // Reset form when form modal is open
+                                   $this->reset();
+                                }
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Retrive Data & Pass data -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/58f926749351f8f247645d4a0ff7e81decd06a65" class="card-title">🌸Retrive Data & Pass data</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a>Get Dtata From Database With specific number</a> <br>
+                        <p>Class File</p>  
+                        <div class="codeBox">
+                            <xmp>    
+                                public function render()
+                                {       
+                                
+                                // Retrive data
+                                  $users = User::latest()->paginate(2);
+
+                                // pass in view
+                                  return view('livewire.admin.users.list-user',[
+                                    'users' => $users,
+                                  ]);
+                                }
+                            </xmp>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <p>view file</p>  
+                        <div class="codeBox">
+                            <xmp>  
+                                <tbody wire:loading.class="searchLoading">
+                                    @forelse ($users as $key => $user)
+                                        <tr>
+                                        <th scope="row">{{ $key + 1 }}</th>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>
+                                            <a href="" wire:click.prevent="userEdit({{ $user }})">
+                                                <i class="fas fa-edit text-warning m2-2"></i>
+                                            </a>
+                                            <a href="" wire:click.prevent="userDelete({{ $user->id }})">
+                                                <i class="fas fa-trash text-danger"></i>
+                                            </a>
+                                        </td>
+                                        </tr>
+                                        @empty
+                                        <tr>
+                                            <td colspan="5" class="text-center">
+                                                 <img src="{{ asset('image/search.svg') }}" alt="">
+                                                 <br><br>
+                                                 <p>No Results Found</p>
+                                            </td>         
+                                        </tr>
+    
+                                    @endforelse
+                                </tbody>
+                            </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Delete User With Confirmation Modal & Warning -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/e4241904d85715f953576c00ace823cd35c992e7" target="_blank" class="card-title">🌸Delete User With Confirmation Modal & Warning</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+
+
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a>Class File :</a>  
+                        <div class="codeBox">
+<xmp>    
+    🌸🌸public $userId;
+    
+    🌸🌸public function showDeleteUserModal($id)
+    {
+        # code...
+        $this->userId = $id;
+        $this->dispatchBrowserEvent('openConfirmDeleteModel');
+    }
+
+    🌸🌸public function confirmUserDelete()
+    {
+        # code...
+        $user = User::findOrFail($this->userId);
+        $user->delete();
+        $this->dispatchBrowserEvent('hideDeleteUserModal',['message'=>'User Deleted successfully']);
+    }
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Blade File :</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸🌸 //......Delete Icon........   
+    <a href="" wire:click.prevent="showDeleteUserModal({{ $user->id }})">
+        <i class="fas fa-trash text-danger"></i>
+    </a>
+
+
+    🌸🌸 //......Confirmation Modal.......
+    <div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" wire:ignore.self>
+        <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-center">
+                        <h3 class="">
+                            Confirm Delete User !
+                        </h3>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center p-2">
+                        <img src="{{ asset('image/danger.png') }}" height="150px" width="150px"alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times mr-1"></i>Cancle</button>
+                        <button  type="button" wire:click.prevent="confirmUserDelete" class="btn btn-danger"><i class="fa fa-trash mr-1"></i>Delete</button>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+
+
+        🌸🌸//......Browser Event........
+        window.addEventListener('openConfirmDeleteModel', event =>{
+            $('#deleteUserModal').modal('show');
+        });
+
+        window.addEventListener('hideDeleteUserModal', event =>{
+                $('#deleteUserModal').modal('hide');
+                toastr.success(event.detail.message, 'Success!');
+        });
+
+
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 🌸One Modal With Two Work (Add & Update) -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/5d7b7dba21a56421917eb47f4039cf319b4e6965" target="_blank" class="card-title">🌸One Modal With Two Work (Add & Update)</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+
+
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a>Class File :</a>  
+                        <div class="codeBox">
+<xmp>  
+
+    🌸public $showEditModal = false;
+    
+    🌸public function showEditUserModal( User $user)
+    {
+        # code...
+        // Reset Form
+        $this->reset();
+        // To show edit modal, make this true
+        $this->showEditModal = true;
+        // put $user perimeter inside user variable
+        $this->user = $user;
+        // make user variable as a array and put it inside ArrayForUserInputFieldValue array.Thats whay we see all input field with value.Because this array is asociated with input field.
+        $this->ArrayForUserInputFieldValue = $user->toArray();
+        //Open Edit_Add user modal
+        $this->dispatchBrowserEvent('Add_Edit_UserModalOpen');
+        
+    }
+
+    🌸public function Edit_And_UpdateUser(){
+
+        $validatedData = Validator::make($this->ArrayForUserInputFieldValue,[
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email,'.$this->user->id,
+            'password' => 'sometimes|confirmed'
+        ])->validate();
+            
+        if(!empty($validatedData['password'])){
+            $validatedData['password'] = bcrypt( $validatedData['password']);
+        }
+    
+            $this->user->update($validatedData);
+            $this->dispatchBrowserEvent('Add_Edit_UserModalClose',['message'=>'User Updated successfully']);
+        }
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Blade File :</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸// ........ Click to open modal
+    <a href="" wire:click.prevent="showEditUserModal({{ $user }})">
+
+
+    🌸//......Two title for two work........   
+    <div class="card-header d-flex justify-content-between">
+        <div class="d-flex justify-content-between w-100">
+                <button class="btn btn-dark" wire:click.prevent="openAddUserModal">
+                    <i class="fas fa-plus text-danger m2-2"></i>
+                        @if ($showEditModal)
+                        <span>Edit User</span>
+                        @else  
+                        <span>Add New User</span>
+                        @endif
+                </button>
+        </div>
+    </div>
+
+
+    🌸//......Dynamic form action set
+    <form autocomplete="true" wire:submit.prevent="{{ $showEditModal ? 'Edit_And_UpdateUser' : 'createUser'}}">
+
+        🌸// Dynamic Button Name
+        <button type="submit" class="btn btn-primary"><i class="fa fa-save mr-1"></i>
+            @if ($showEditModal)
+                <span>Update</span> 
+            @else
+                <span>Save</span>
+            @endif
+        </button>
+    </form>
+
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Livewire Paginating System without page refresh -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/9db18d6a3e4e3d540960de6c89a2541c4f0f0574" target="_blank" class="card-title">🌸Livewire Paginating System without page refresh</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a>Class File :</a>  
+                        <div class="codeBox">
+        <xmp>  
+            🌸 // For Livewire Pagination system
+            use Livewire\withPagination;
+            
+            🌸 // Livewire default pagination.This stop pagination browser refresh.Without this, painating also work but there page was refresing issue. 
+            use withPagination;
+        
+            // By default , Livewire pagination use Tailwind css Theme.But here we use bootstrap Theme.
+            //If you want to use Tailwind CSS Theme bydefault uou dont need this line of code  
+            protected $paginationTheme = 'bootstrap';
+        </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Blade File :</a>  
+                        <div class="codeBox">
+        <xmp> 
+        🌸{{-- Laravel default paginating. This also required for livewire pagination --}}
+        <div class="card-footer d-flex justify-content-end">
+            {{ $users->links() }}
+        </div>
+        </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- 🌸Extends livewire default component to Self created -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/1cd0f09b19e3302f8868f5d99505cbf48478fb0c" target="_blank" class="card-title">🌸Extends livewire default component to Self created component</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a>Self Created AdminComponent which extends main compoent :</a>  <br>
+                        <p>This Component is our self created Component. Which is extend Livewire default Component.So All of common import or others thing we insert here.And All off created others component extends this.Thats why they get this component Behaviour automatically.</p>
+                        <div class="codeBox">
+<xmp>  
+    🌸 use Livewire\Component;
+
+    🌸 // Include here all required plugging
+    use Livewire\withPagination;
+    use Illuminate\Support\Facades\Validator;
+    class AdminComponent extends Component
+    {
+        <!-- Code........ -->
+    }
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Blade File :</a>  
+                        <div class="codeBox">
+<xmp> 
+    
+    🌸namespace App\Http\Livewire\Admin\Users;
+    
+    🌸use  App\Http\Livewire\Admin\AdminComponent;
+    
+    class ListUser extends AdminComponent
+    {
+        <!-- Code........ -->
+    }
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- 🌸Create Fake Data -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/3c5b96469a58b5adbe3403691e83a5da6768917e" target="_blank" class="card-title">🌸Create Fake Data</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a>Firstly create a seeder  :</a>  
+                        <div class="codeBox">
+<xmp>  
+    🌸php artisan make:seeder SeederName
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Secondly go to SeederName.php :</a>  
+                        <div class="codeBox">
+<xmp> 
+
+🌸// Import this three alias
+    use Illuminate\Support\Facades\DB;
+    use Illuminate\Support\Str;
+    use Faker\Factory as Faker;
+
+🌸// Create Facker 
+    $faker = Faker::create();
+
+🌸// Create Facker  
+    foreach (range(1,10) as $index) {
+        DB::table('tableName')->insert([
+            'name' => $faker->name,
+        ]);
+    } 
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Thirdly go to DatabaseSeeder.php  :</a>  
+                        <div class="codeBox">
+<xmp>      
+    public function run()
+    {
+        $this->call([
+            SeederName::class
+        ]);
+    }
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Finally run this two command :</a>  
+                        <div class="codeBox">
+<xmp>      
+    🌸composer dump-autoload
+    🌸php artisan db:seed
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Date Picker Livewire -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/793f7b28072538873e26c7012913ff4f5a0797df" target="_blank" class="card-title">🌸Date Picker Livewire</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://getdatepicker.com/5-4/Usage/">Firstly Visit Website :</a><br>
+                        <p>Read documentation if you want or</p>  <br>
+                        <a target="_blank" href="https://github.com/ShishirBhuiyan/Plugin/tree/a0ea5d474538c2b0c07a55f3b86e22ee4bc93d6e">Just download required plugin from this repository , and add your header properly</a>
+                    </li>
+                    <li>
+                        <a>Secondly Include file link carefully:</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸// CSS...........
+    <link rel="stylesheet" href="{{ asset('Asset/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+
+    🌸// Js................
+    <!-- Tempusdominus Bootstrap 4 ....For Time & date picker needed-->
+    <script src="{{ asset('Asset/plugin/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    
+    <!-- For daterangepicker -->
+    <script src="{{ asset('Asset/plugin/moment/moment.min.js') }}"></script>
+    <script src="{{ asset('Asset/plugin/daterangepicker/daterangepicker.js') }}"></script>
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Thirdly put date picker form  inside blade file:</a>  
+                        <div class="codeBox">
+<xmp>   
+    //🌸..........    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <form wire:submit.prevent="createAppointment" autocomplete="off">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Appointment Date:</label>
+                                        <div wire:ignore class="input-group date" id="appointmentDate" data-target-input="nearest" data-appoinmentdate="@this">
+
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#appointmentDate" id="appointmentDateInput">
+
+                                            <div class="input-group-append" data-target="#appointmentDate" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button id="submit" type="submit" class="btn btn-info"><i class="fa fa-save mr-1"></i> Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    //🌸..........
+    @push('scripts')
+        <script type="text/javascript">
+            // Initialize datetimepicker
+            $('#appointmentDate').datetimepicker({
+                format:'L',
+            });
+
+            // Listen Livewire change event.
+            $('#appointmentDate').on("change.datetimepicker", function(e){
+            let date = $(this).data('appoinmentdate');
+
+            // here eval() meathoad use as proxy of  wire:model.defer="state.date". So we dont need to use any wire model inside input element
+            eval(date).set('state.date', $('#appointmentDateInput').val());
+            });
+        </script>  
+    @endpush
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Fourthly go to Class File:</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸public $state = [];
+
+    🌸public function ClassFileName()
+    {
+        ModelName::create($this->state);
+    }
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Finally you should use $cast property inside modal:</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸// Before inserted the getting date should be cast first
+    protected $casts = [
+        'date' => 'datetime',
+    ];
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- 🌸Time Picker Livewire -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/a495034ea01068b28ab69de0023d3204a883dd38" target="_blank" class="card-title">🌸Time Picker Livewire</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://getdatepicker.com/5-4/Usage/">Firstly Visit Website :</a><br>
+                        <p>Read documentation if you want or</p>  <br>
+                        <a target="_blank" href="https://github.com/ShishirBhuiyan/Plugin/tree/a0ea5d474538c2b0c07a55f3b86e22ee4bc93d6e">Just download required plugin from this repository , and add your header properly</a>
+                    </li>
+                    <li>
+                        <a>Secondly Include file link carefully:</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸// CSS...........
+    <link rel="stylesheet" href="{{ asset('Asset/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+
+    🌸// Js................
+    <!-- Tempusdominus Bootstrap 4 ....For Time & date picker needed-->
+    <script src="{{ asset('Asset/plugin/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    
+    <!-- For daterangepicker -->
+    <script src="{{ asset('Asset/plugin/moment/moment.min.js') }}"></script>
+    <script src="{{ asset('Asset/plugin/daterangepicker/daterangepicker.js') }}"></script>
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Thirdly put date picker form  inside blade file:</a>  
+                        <div class="codeBox">
+<xmp>   
+    //🌸..........    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <form wire:submit.prevent="createAppointment" autocomplete="off">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Appointment Time:</label>
+                                        <div wire:ignore class="input-group date" id="appointmentTime" data-target-input="nearest" data-appoinmenttime="@this">
+
+                                            <input  type="text" class="form-control datetimepicker-input" id="appointmentTimeInput"data-target="#appointmentTimeInput">
+
+                                            <div class="input-group-append" data-target="#appointmentTime" data-toggle="datetimepicker">
+                                                <div class="input-group-text">
+                                                    <i class="far fa-clock"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button id="submit" type="submit" class="btn btn-info"><i class="fa fa-save mr-1"></i> Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    //🌸..........
+    @push('scripts')
+        <script type="text/javascript">
+            // Initialize datetimepicker
+            $('#appointmentTime').datetimepicker({
+                format: 'LT'
+            });
+
+            // Listen Livewire change event using js browser event for time picker.
+            $('#appointmentTime').on("change.datetimepicker", function(e){
+            let time = $(this).data('appoinmenttime');
+
+            // here eval() meathoad use as proxy of  wire:model.defer="state.date". So we dont need to use any wire model inside input element
+            eval(time).set('state.time', $('#appointmentTimeInput').val());
+            });
+        </script>  
+    @endpush
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Fourthly go to Class File:</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸public $state = [];
+
+    🌸public function ClassFileName()
+    {
+        ModelName::create($this->state);
+    }
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Finally you should use $cast property inside modal:</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸// Before inserted the getting time should be cast first
+    protected $casts = [
+        'time' => 'datetime',
+    ];
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- 🌸 make Time Picker as a Componen -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/f7db9e0efd082ef65caf521ae513a956e535d2dd" target="_blank" class="card-title">🌸 make Time Picker as a Component</a>
+                
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p>Page Blade File:</p>
+                        <div class="codeBox">
+        <xmp> 
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="appointmentTime">Appointment Time</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                        </div>
+                        
+                        // state is deffine in according class file
+                        <x-timePicker wire:model.defer="state.time" id="appointmentTime" />
+
+                    </div>                                            
+                </div>
+            </div>
+        </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Component Blade File:</p>
+                        <div class="codeBox">
+        <xmp>
+            <input {{ $attributes }} type="text" class="form-control datetimepicker-input" id="{{ $id }}" data-toggle="datetimepicker" data-target="#{{ $id }}"
+            onchange="this.dispatchEvent(new InputEvent('input'))"
+            />
+            
+                @push('scripts')
+                    <script type="text/javascript">
+                            $('#{{ $id }}').datetimepicker({
+                                format:'LT',
+                            });
+                    </script>    
+                @endpush
+        </xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Component Class File :</p>
+                        <div class="codeBox">
+        <xmp>
+            🌸 public $id;
+
+            // argument ($id) is a id="appointmentTime" 
+            🌸 public function __construct($id)
+            {
+                //$this->id means public $id;
+                $this->id = $id;
+            }
+        </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- 🌸Summernote Html Edittor -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/60f1d1c930f4450e70a6d4374fbbc9e713b0c1a5" target="_blank" class="card-title">🌸Summernote Html Edittor</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://summernote.org/getting-started/">Firstly Visit Website :</a><br>
+                        <p>Read documentation if you want </p>  <br>
+                        Or <a target="_blank" href="https://github.com/ShishirBhuiyan/Plugin/tree/1fe7b7cf1838e6fb7b0fb74837b4c1809babfbb4">Just download required plugin from this repository , and add your header properly</a>
+                    </li>
+                    <li>
+                        <a>Secondly Include file link carefully:</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸// With Bootstrap Plugin..........
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+    🌸// Without Bootstrap Plugin..........
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <a>Thirdly put date picker form  inside blade file:</a>  
+                        <div class="codeBox">
+<xmp>   
+    //🌸..........    
+    <form method="post">
+        <textarea id="summernote" name="editordata"></textarea>
+    </form>
+
+    //🌸..........
+    @push('scripts')
+        <script type="text/javascript">
+            // Initialize Summernote Edittor with Bootstrap
+            $('#summernote').summernote({
+                callbacks: {
+                    onBlur: function() {
+                        let note = $(this).data('note');
+                        eval(note).set('state.note', $('#summernote').val());
+                    }
+                }
+            });
+
+
+            // Initialize Summernote Edittor without Bootstrap
+            $('#summernote').summernote({
+                placeholder: 'Hello stand alone ui',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
+        </script>  
+    @endpush
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸Send wire:model.defer in a components Using {{ $attributes }} property -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/68f068f2c5b5250aa0c5e23a2da6424e765bd254" target="_blank" class="card-title">🌸Send wire:model.defer in a components Using {{ $attributes }} property</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a>If we insert (wire:model.defer) or (wire:model) directly in component, this work not perfectly. We should also use {{ attributes }} inside iputfield in component blade file</a>  
+                        <div class="codeBox">
+<xmp> 
+    🌸Show Component
+        <x-date-picker wire:model.defer="state.name"/>
+
+
+    🌸Component Blade File
+    <input {{ $attributes }} type="text" class="form-control datetimepicker-input"  data-toggle="datetimepicker" />
+
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 🌸 Get InputEvent as a Livewire dispatchEvent -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/c3f45604fd51ba2b23c8792c117f5bf9e50be371" target="_blank" class="card-title">🌸 Get InputEvent as a Livewire dispatchEvent </a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <div class="codeBox">
+<xmp> 
+    🌸Show Component
+    <input {{ $attributes }} type="text" class="form-control datetimepicker-input" id="datetimepicker5" data-toggle="datetimepicker" data-target="#datetimepicker5"
+
+    onchange="this.dispatchEvent(new InputEvent('input'))"/>
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+        <!-- 🌸 Cache Clear -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://www.techsolutionstuff.com/post/laravel-clear-cache-using-artisan-command" target="_blank" class="card-title">🌸 Cache Clear</a>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=VJ1yeoJqpr0">This video help me to this essue</a>
+                        <p>If you think your code is correct but not working. You should clear your all kind of cache. For easying this create a cache Clear route. Then hit this route....</p>
+                        <div class="codeBox">
+<xmp> 
+    🌸Route::get('/clear-cache', function() {
+        $exitCode = Artisan::call('config:cache');
+        $exitCode = Artisan::call('cache:clear');
+        $exitCode = Artisan::call('view:clear');
+        $exitCode = Artisan::call('route:cache');
+    });
+
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸 pass id In laravel & Livewire component -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/67197a67e2d2d509089b5bc5b99b5b6ac88542b7" target="_blank" class="card-title">🌸 pass id In laravel & Livewire component</a>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p>First :</p>
+                        <div class="codeBox">
+<xmp> 
+    🌸 <x-date-picker id="appointmentStartDate"/>
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Secondly accept this id as a constructor parameter in class file.Then assign in a public variable.Now you can print this public variavle like this :</p>
+                        <div class="codeBox">
+<xmp> 
+    🌸public $componentId;
+
+    🌸public function __construct($id)
+    {
+        //$this->componentId means public $componentId;
+        $this->componentId = $id;
+    }
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Now you can print this public variavle like this :</p>
+                        <div class="codeBox">
+<xmp> 
+<div>
+    {{ $componentId }}
+    // This {{ $componentId }} print 'appointmentStartDate'
+</div>
+
+
+// use as a dynamic property in Js
+<script type="text/javascript">
+    $(function () {
+       alert($componentId);
+    });
+</script>
+    
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 🌸 pass validation error class in component -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/89aec3a0a153d9c5f248d8927f100b66b8bd496d" target="_blank" class="card-title">🌸 pass validation error class in component</a>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p>If component has already class="" is existng with class name, then you want to add another class name daynamacally, follow this step :</p>
+                        <div class="codeBox">
+<xmp> 
+    //This component has already form-control class name
+    🌸 <input {{ $attributes }}  class="form-control" />
+
+    //I also want to pass date class name inside error property
+    🌸 <x-componentName :error="'date'" />
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Secondly accept :error from Components class file :</p>
+                        <div class="codeBox">
+<xmp> 
+    🌸public $errorName;
+
+    🌸public function __construct($error)
+    {
+        //$this->error means public $error;
+        $this->errorName = $error;
+    }
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Now you can use this public variavle like this :</p>
+                        <div class="codeBox">
+<xmp> 
+<div>
+    {{ $errorName }}
+    <input {{ $attributes }} type="text" class="form-control  @error($errorName) is-invalid @enderror " />
+</div>
+
+
+// use as a dynamic property in Js
+<script type="text/javascript">
+    $(function () {
+       alert($errorName);
+    });
+</script>
+    
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 🌸 Bootstrap Collor Picke -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" href="https://github.com/ShishirBhuiyan/Livewire/commit/d405c3e5afb3d397b2a2aadea9e8beb52e95ea3a" target="_blank" class="card-title">🌸 Bootstrap Collor Picker</a>
+        
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p>Required Asset : <a target="_blank" href="https://github.com/ShishirBhuiyan/Plugin/tree/fc2d544b9aa390967b98ed96fc3cb00492b29608">Download here</a></p>
+                        <p>Make file link carefully</p>
+                        <div class="codeBox">
+<xmp> 
+    🌸<link rel="stylesheet" href="{{ asset('Asset/plugin/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}">
+
+    🌸<script src="{{ asset('Asset/plugin/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js') }}"></script>
+
+    
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Blade File</p>
+                        <div class="codeBox">
+<xmp> 
+    🌸<div class="col-md-4">
+        <div class="form-group" wire:ignore.self>
+            <label>Color picker:</label>
+            <div class="input-group" id="ColorPicker">
+                <input name="color" wire:model.defer="state.color" type="text" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="fas fa-square"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    🌸<script>
+        //Initialize color Picker
+        $('#ColorPicker').colorpicker().on('change', function(event) {
+            // Show color Preview in its icon
+            $('#ColorPicker .input-group-text').css('background-color', event.color.toString());
+        });
+    </script>
+
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 🌸Migration -->
+        <div class="card  collapsed-card p-0">
+            <div class="card-header">
+                <a class="card-title text-dark">🌸Migration</a>
+        
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <!-- 🌸 Random column added in existing table using Migration -->
+                <div class="card card-indigo collapsed-card p-0">
+                    <div class="card-header">
+                        <a class="text-light">🌸 Random column added in existing table using Migration </a>
+                
+                        <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus text-light"></i>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;">
+                        <ul>
+                            <li>
+                                <p>Run : This command should be like this, otherwise is not working</p>
+                                <div class="codeBox">
+        <xmp> 
+            🌸 php artisan make:migration add_color_field_to_existingTableName_table
+        </xmp>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Migration File Code</p>
+                                <div class="codeBox">
+        <xmp> 
+            🌸public function up()
+            {
+                Schema::table('existingTableName', function (Blueprint $table) {
+                    $table->string('color')->nullable()->default(null);
+                });
+            }
+        
+            🌸public function down()
+            {
+                Schema::table('existingTableName', function (Blueprint $table) {
+                    $table->dropColumn('color');
+                });
+            }
+        
+        </xmp>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🌸Eloquent -->
+        <div class="card  collapsed-card p-0">
+            <div class="card-header">
+                <a class="card-title text-dark">🌸Eloquent</a>
+        
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <!-- 🌸 Random column added in existing table using Migration -->
+                <div class="card card-indigo collapsed-card p-0">
+                    <div class="card-header">
+                        <a class="text-light">🌸Eloquent when with Where query </a>
+                
+                        <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus text-light"></i>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;">
+                        <div class="codeBox">
+    <xmp> 
+        🌸// Filter data with status
+        Appoinment::with('Client')
+        ->when($this->status, function($query, $status){
+        return $query->where('status',$status);
+        })
+        ->latest()
+        ->paginate();
+    
+    </xmp>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 🌸 Some validation description -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a target="_blank" >🌸 Some validation description </a>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p>Class File :</p>
+                        <div class="codeBox">
+        <xmp> 
+            🌸 use Illuminate\Support\Facades\Validator;
+
+            🌸 Validator::make($this->state,[
+                //This filed must be required
+                'client_id' => 'required',
+
+                // That means note can be empty
+                'note' => 'nullable',
+
+                // This status field required with only SCHEDULED,CLOSED value
+                'status' => 'required|in:SCHEDULED,CLOSED',],
+
+            // Custom Message
+            ['date.required' => 'Alert ! Shishir warning you for last time.'])->validate();
+        </xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    
+        <!-- 🌸 Use of {!!  !!}  -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a >🌸 Use of {!!  !!} </a>
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p>This syntex convert html code to code output : </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸<textarea id="summernote"> {!! $state['note'] !!} </textarea>
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 🌸 Route perimeter pass and access -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a >🌸 Route perimeter pass and access </a>
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p>Pass data in name route from blade file: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸<a href="{{ route('admin.appoinments.edit', $PassAppoinment) }}">
+        <i class="fas fa-edit text-warning m2-2"></i></a>
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>route can like this: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸Route::get('admin/appoinment/{PassAppoinment}/edit', UpdateAppoinmentsForm::class)->name('admin.appoinments.edit');
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Recive route perimeter $PassAppoinment from class file inside mount meathoad: </p>
+                        <div class="codeBox">
+<xmp>   
+    🌸 public $state = [];
+
+    // This PassAppoinment come form route paraneter
+    public function mount(Appoinment $PassAppoinment)
+    {
+            $this->state = $PassAppoinment->toArray();
+    }
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸 Sweet Alert -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/37188b88fe2ea65d70f5f7995bdcb70a937ec249" target="_blank">🌸 Sweet Alert </a>
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p>Include Cdn: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Secondly Blade File: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸<a href="" wire:click.prevent = "confirmAppoinmentRemoval({{ $appoinment->id }})">
+        <i class="fas fa-trash text-danger"></i>
+    </a>
+    
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Thirdly Class File: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸public $appoinmentIdRemoval = null;  
+    🌸public function confirmAppoinmentRemoval($appoinmentId)
+    {
+        # code...
+        $this->appoinmentIdRemoval = $appoinmentId;
+        $this->dispatchBrowserEvent('showDeleteAppoinmentConfirmation');
+    }
+    
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Fourthly Blade File: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸<script>
+        window.addEventListener('showDeleteAppoinmentConfirmation', event =>{
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't to delete this Appoinment",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Livewire.emit('appoinmentDeleteConfirmed')
+                    }
+                })
+        });
+    </script>
+    
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Fifthly Class File: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸protected $listeners = ['appoinmentDeleteConfirmed'=>'appoinmentDelete'];
+    
+    🌸public function appoinmentDelete()
+    {
+        # code...
+        $user = Appoinment::findOrFail($this->appoinmentIdRemoval);
+        $user->delete();
+        $this->dispatchBrowserEvent('SweetAlertSuccess',['message'=>'Appoinment Deleted successfully']);
+    }
+    
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Finally Blade File: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸<script>
+        window.addEventListener('SweetAlertSuccess', event =>{
+                Swal.fire(
+                    event.detail.message ,
+                    'success'
+                )
+        });
+    </script>
+    
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- 🌸 Dynamic data search with loading Indicator etc -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/44a03fcc289ad4b5821b1cb9c5451e2b39f48e82" target="_blank">🌸 Dynamic data search with loading Indicator etc </a>
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <p>Some Icon : <a target="_blank" href="https://github.com/ShishirBhuiyan/Plugin/tree/fed03a1f57a63115e655dee62406fe3567ff56d7">Download here</a></p>
+                <ul>
+                    <li>
+                        <div class="card collapsed-card p-0">
+                            <div class="card-header">
+                                <a>🌸First create search component </a>
+                                <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="codeBox">
+<xmp> 
+    🌸<div class="d-flex justify-content-center align-items-center border bg-white pr-2">
+        {{-- This $attributes recive wire:model property from component --}}
+        <input {{ $attributes }} type="search" class="form-control border-0" placeholder="Search">
+        
+        {{-- This Loading icon target alaways searchUser property--}}
+        <div wire:loading wire:target="searchUser">                    
+            <div class="la-ball-clip-rotate la-dark la-sm">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    🌸<style>
+        .la-ball-clip-rotate,
+        .la-ball-clip-rotate > div {
+            position: relative;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+        }
+        .la-ball-clip-rotate {
+            display: block;
+            font-size: 0;
+            color: #fff;
+        }
+        .la-ball-clip-rotate.la-dark {
+            color: #333;
+        }
+        .la-ball-clip-rotate > div {
+            display: inline-block;
+            float: none;
+            background-color: currentColor;
+            border: 0 solid currentColor;
+        }
+        .la-ball-clip-rotate {
+            width: 32px;
+            height: 32px;
+        }
+        .la-ball-clip-rotate > div {
+            width: 32px;
+            height: 32px;
+            background: transparent;
+            border-width: 2px;
+            border-bottom-color: transparent;
+            border-radius: 100%;
+            -webkit-animation: ball-clip-rotate .75s linear infinite;
+            -moz-animation: ball-clip-rotate .75s linear infinite;
+                -o-animation: ball-clip-rotate .75s linear infinite;
+                    animation: ball-clip-rotate .75s linear infinite;
+        }
+        .la-ball-clip-rotate.la-sm {
+            width: 16px;
+            height: 16px;
+        }
+        .la-ball-clip-rotate.la-sm > div {
+            width: 16px;
+            height: 16px;
+            border-width: 1px;
+        }
+        .la-ball-clip-rotate.la-2x {
+            width: 64px;
+            height: 64px;
+        }
+        .la-ball-clip-rotate.la-2x > div {
+            width: 64px;
+            height: 64px;
+            border-width: 4px;
+        }
+        .la-ball-clip-rotate.la-3x {
+            width: 96px;
+            height: 96px;
+        }
+        .la-ball-clip-rotate.la-3x > div {
+            width: 96px;
+            height: 96px;
+            border-width: 6px;
+        }
+        /* Animation */
+        @-webkit-keyframes ball-clip-rotate {
+            0% {
+                -webkit-transform: rotate(0deg);
+                        transform: rotate(0deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                        transform: rotate(180deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+            }
+        }
+        @-moz-keyframes ball-clip-rotate {
+            0% {
+                -moz-transform: rotate(0deg);
+                    transform: rotate(0deg);
+            }
+            50% {
+                -moz-transform: rotate(180deg);
+                    transform: rotate(180deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+                    transform: rotate(360deg);
+            }
+        }
+        @-o-keyframes ball-clip-rotate {
+            0% {
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            50% {
+                -o-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            100% {
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes ball-clip-rotate {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                        transform: rotate(180deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                        transform: rotate(360deg);
+            }
+        }
+    </style>  
+    
+</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+
+
+
+
+                    <li>
+                        <p>Pass Dynamic wire:model from blade file: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸<x-search-input wire:model.delay="searchUser"/>
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Thirdly go to class file: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸public $searchUser = null;
+
+    🌸public function render()
+    {       
+    $users = User::query()
+    ->where('name','like','%'.$this->searchUser.'%')
+    ->where('email','like','%'.$this->searchUser.'%')
+    ->latest()->paginate(4);
+
+    return view('livewire.admin.users.list-user',[
+        'users' => $users,
+    ]);
+    }
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Fourthly print result data in blade file: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸@forelse ($users as $key => $user)
+    <tr>
+        <td></td>
+    </tr>
+
+    @empty
+    <tr>
+            <td colspan="6" class="text-center">
+                <img src="{{ asset('image/search1.gif') }}" alt="">
+                <br><br>
+                <p>No Results Found</p>
+            </td> 
+    </tr>
+    @endforelse
+
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- 🌸 Data Filtering with (query string, reset page, where query use) -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/53903de2641f782d8ef28585f9848184eef52f89" target="_blank">🌸 Data Filtering with (query string, reset page, where query use)  </a>
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p>Blade File : </p>
+                        <div class="codeBox">
+<xmp> 
+<div class="btn-group">
+    🌸<button  wire:click="filterAppoinmentsByStatus " type="button" class="btn {{ is_null($status) ? 'btn-secondary' : 'btn-default' }}">
+    <span class="mr-1">All</span> 
+    <span class="badge badge-pill badge-info">{{ $appoinmentsCount }}</span>
+    </button>
+
+    🌸<button wire:click="filterAppoinmentsByStatus('scheduled')" type="button" class="btn {{ ($status=='scheduled' ? 'btn-secondary' : 'btn-default') }}">
+    <span class="mr-1">Scheduled</span>
+    <span class="badge badge-pill badge-primary">{{ $scheduledAppoinmentsCount }}</span>
+    </button>
+
+    🌸<button wire:click="filterAppoinmentsByStatus('closed')" type="button" class="btn {{ ($status=='closed' ? 'btn-secondary' : 'btn-default') }}">
+    <span class="mr-1">Closed</span>
+    <span class="badge badge-pill badge-success">{{ $closedAppoinmentsCount }}</span>
+    </button>
+</div>
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Class File: </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸 // It is a livewire query string formate. Which is automatically add in route as aquery.
+    protected $queryString = ['status'];
+
+    🌸// This is a optional perimeter function
+    public function filterAppoinmentsByStatus($status = null)
+    {
+        // First it is reset the page
+        $this->resetPage();
+        // Then update the status value
+        $this->status = $status;
+    }
+
+    🌸 // Finally the render functon execute
+    public function render()
+    {
+        $appoinments = Appoinment::with('Client')
+            // Filter data with status
+            ->when($this->status, function($query, $status){
+                return $query->where('status',$status);
+            })
+            ->latest()
+            ->paginate();
+
+            
+        $appoinmentsCount = Appoinment::count();
+        $scheduledAppoinmentsCount = Appoinment::where('status','scheduled')->count();
+        $closedAppoinmentsCount = Appoinment::where('status','closed')->count();
+            
+        return view('livewire.admin.appoinments.list-appoinments',[
+            'appoinments' => $appoinments,
+            'appoinmentsCount'=> $appoinmentsCount,
+            'scheduledAppoinmentsCount'=>$scheduledAppoinmentsCount,
+            'closedAppoinmentsCount'=> $closedAppoinmentsCount,
+        ]);
+    }
+
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- 🌸 Reset Page -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a >🌸 Reset Page </a>
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <ul>
+                    <li>
+                        <p> $this->resetPage() remember that which page call this function & it reset that page : </p>
+                        <div class="codeBox">
+<xmp> 
+    🌸public function filter()
+    {
+        $this->resetPage();
+    }
+
+</xmp>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 🌸 Image Magement -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a>🌸 Image Magement </a>
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <div class="card card-info collapsed-card p-0">
+                    <div class="card-header">
+                        <a class="card-title text-dark">🌸Essential Code</a>
+                
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;"> 
+                        <!-- 🌸Some calculation -->
+                        <div class="card card-info collapsed-card p-0">
+                            <div class="card-header">
+                                <a class="card-title text-dark">🌸Some calculation</a>
+                        
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                <ul>
+                                    <li>
+                                        🌸Get image extention
+                                        <div class="codeBox">
+        <xmp> 
+            $extension = $image->extension();
+        </xmp>
+                                        </div>
+                                    </li>
+                        
+                                    <li>
+                                        🌸Create custom file mame
+                                        <div class="codeBox">
+        <xmp> 
+            $imageName = $name.'.'.$extension;
+        </xmp>
+                                        </div>
+                                    </li>
+                        
+                                    <li>
+                                        🌸Get File size
+                                        <div class="codeBox">
+        <xmp> 
+            
+            🌸$bytes = $request->file('file')->getSize();
+            
+            🌸$MB = number_format($bytes / 1048576, 2) . ' MB';
+        
+        </xmp>
+                                        </div>
+                                    </li>
+                        
+                                    <li>
+                                        🌸 Check File size is greter than of 1MB or not
+                                        <div class="codeBox">
+        <xmp> 
+            🌸if(intval($MB) > 1)
+            {
+                return back()->with('error', 'Image size should be  1Mb');
+            }
+            
+        </xmp>
+                                        </div>
+                                    </li>
+                        
+                        
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 🌸Image preview condition if one form use for insert & update -->
+                        <div class="card card-info collapsed-card p-0">
+                            <div class="card-header">
+                                <a class="card-title text-dark">🌸Image preview condition if one form use for insert & update</a>
+                        
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                <div class="codeBox">
+<xmp>
+    {{-- if you select image then show it --}}
+    @if ($photo)
+        <img src="{{ $photo->temporaryUrl() }}" class="img d-block mt-2 w-100 h-50">
+    @else
+       <!-- check which modal is open? if Insert modal open , that time no image prevew by default empty -->
+        @if ($showEditModal == false)
+        {{--  --}}
+        @else
+        <!-- But if Update modal is open show old iamge in image preview -->
+            @if ($ArrayForUserInputFieldValue)
+                <img src="{{ $ArrayForUserInputFieldValue['avatar_url'] }}" class="img d-block mt-2 w-100" style="height:300px;">
+            @endif
+        @endif
+    @endif
+    
+</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card card-info collapsed-card p-0">
+                    <div class="card-header">
+                        <a class="card-title text-dark">🌸 Genarel proces.</a>
+                
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;">
+                        <p>🌸First create file storing folder & link this inside public folder. You create folder with your hand Typing or use config/filesystem.php links array</p> 
+                        <div class="codeBox">
+<xmp> 
+    🌸 storage/app/public/avatars
+    🌸 Run: php artisan storage:link
+
+    🌸Now storage file link inside public folder as a storage name folder.That is a predifiend configaration inside config/filesystem.php links array. You can also defiend your storage file location as your wish. config/filesystem.php look like this
+
+    🌸Public_path means = public folder
+     storage_path means = storage folder
+    that means we pass storage/app/public as a link name of public/storage &
+    pass storage/app/public/avatars as a link name of public/storage/avatars.
+    when php artisan storage:link is run , below link is created
+
+    🌸'links' => [
+        public_path('storage') => storage_path('app/public'),
+        public_path('storage/avatars') => storage_path('app/public/avatars'),
+    ],
+</xmp>
+                        </div> 
+                        <p>🌸Blade File </p> 
+                        <div class="codeBox">
+<xmp> 
+🌸<div class="form-group">
+    <label for="cpassword">Profile Photo</label>
+    
+    <!-- Image preview -->
+    @if ($photo)
+        <img src="{{ $photo->temporaryUrl() }}" class="img d-block mt-2 w-100 h-50">
+    @endif
+
+
+    <div class="custom-file">
+        <input wire:model="photo" type="file" class="custom-file-input" id="customFile">
+        <label class="custom-file-label" for="customFile">
+        <!-- When photo is selected show original name.Otherwise show Chose file -->
+            @if ($photo)
+                {{ $photo->getClientOriginalName() }}
+            @else
+                Choose file
+            @endif
+        </label>
+    </div>
+</div>
+
+</xmp>
+                        </div>
+                        <p>🌸Class File </p> 
+                        <div class="codeBox">
+<xmp> 
+    🌸use Image;
+    use File;
+    <!-- Livewire need this -->
+    use Livewire\WithFileUploads;
+
+    <!-- Livewire need this -->
+    🌸use  WithFileUploads;
+
+    🌸public $photo;
+    public $name;
+
+    🌸public function createUser()
+    {
+        <!-- Get file name extention -->
+        $photoExtention = $this->photo->extension();
+
+        <!-- Create custom file name -->
+        $imageName = $this->name.'.'.$photoExtention
+
+        <!-- before store file, check file already exist or not -->
+        <!-- This is check public folder -->
+        $check_old_image = public_path("storage/avatars/$imageName");
+        <!-- we can also check in (storage_patch). Thats time its look like this: storage_path("app/public/avatars/$imageName")-->
+
+        <!-- If exist, delete this file -->
+        if(File::exists($check_old_image)) {
+            File::delete($check_old_image);
+        }
+
+        <!-- this file store storage/app/public/avatars/ -->
+        <!-- And that was inked in public folder -->
+        $path = $this->photo->storeAs(
+          'public/avatars', $imageName
+        );
+    }
+
+</xmp>
+                        </div>
+                        <p>🌸Show image  </p> 
+                        <div class="codeBox">
+<xmp> 
+    🌸
+    <td>
+        @if ($user->avatar)
+        <!-- asset() indicate public folder -->
+        <img src="{{ asset('storage/avatars/'.$user->avatar) }}" style="width: 70px; height:70px;">
+        @else
+        <img src="{{url('image/noimage.png')}}" style="width: 70px; height:70px;" alt="">
+        @endif
+    </td>
+
+</xmp>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+        
+        <!-- 🌸Accessor & Mutators -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a href="53903de2641f782d8ef28585f9848184eef52f89" target="_blank">🌸Accessor & Mutators</a>
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+                <!-- 🌸 Important Docs -->
+                <div class="card card-info collapsed-card p-0 ">
+                    <div class="card-header">
+                        <a class="card-title text-light">🌸Some Important Things</a>
+                
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;">
+                        <!-- Casting System -->
+                        <div class="card card-indigo collapsed-card p-0">
+                            <div class="card-header">
+                                <a class="card-title text-light">🌸Casting System</a>
+                        
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                <!-- Attribute Casting -->
+                                <div class="card card-indigo collapsed-card p-0">
+                                    <div class="card-header">
+                                        <a class="card-title text-light">🌸Attribute $casts</a>
+                                
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body" style="display: none;"> 
+                                        <div class="codeBox">
+        <xmp> 
+            The $casts property on your model provides a convenient method of converting attributes to common data types. The supported cast types are: integer, real, float, double, string, boolean, object, array, collection, date and datetime.
+        </xmp>
+                                        </div>
+                                        <p>For example, let's cast the is_admin attribute, which is stored in our database as an integer (0 or 1) to a boolean value:যা আমাদের ডাটাবেসে বুলিয়ান মানের পূর্ণসংখ্যা হিসাবে সংরক্ষণ করা হয়</p>
+                                        <div class="codeBox">
+        <xmp>    
+            protected $casts = [
+                    'is_admin' => 'boolean',
+            ];
+        </xmp>
+                                        </div>
+                                        <p>Now the is_admin attribute will always be cast to a boolean when you access it, even if the underlying value is stored in the database as an integer:</p>
+                                    </div>
+                                </div>
+                                <!-- Array casting -->
+                                <div class="card card-indigo collapsed-card p-0">
+                                    <div class="card-header">
+                                        <a class="card-title text-light">🌸Array Casting</a>
+                                
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body" style="display: none;"> 
+                                        🌸<p>The array cast type is particularly useful when working with columns that are stored as serialized JSON. For example, if your database has a TEXT field type that contains serialized JSON, adding the array cast to that attribute will automatically deserialize the attribute to a PHP array when you access it on your Eloquent model:</p>
+                                        <div class="codeBox">
+        <xmp> 
+            🌸protected $casts = [
+                'options' => 'array',
+            ];
+        </xmp>
+                                        </div>
+                                        🌸<p>When you set the value of the options attribute, the given array will automatically be serialized back into JSON for storage:</p>
+                                        <div class="codeBox">
+        <xmp> 
+            $user = App\User::find(1);
+        
+            $options = $user->options;
+            
+            $options['key'] = 'value';
+            
+            $user->options = $options;
+            
+            $user->save();
+        </xmp>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- $appends -->
+                        <div class="card card-indigo collapsed-card p-0">
+                            <div class="card-header">
+                                <a class="card-title text-light">🌸$appends</a>
+                        
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                🌸<p>If you should want to print this result As a Shishir Bhuiyan, you should $appends full_name attribute.Otherwise it is not work.</p>
+                                <div class="codeBox">
+                        <xmp>
+                            🌸protected $appends = ['full_name'];
+                        </xmp>
+                                </div> 
+                                <div class="codeBox">
+                        <xmp>
+                            🌸$this->first_name = Shishir; 
+                            🌸$this->last_name  = Bhuiyan;
+                        
+                            🌸function getFullNameAttribute() {
+                            return $this->first_name . ' ' . $this->last_name;
+                            }
+                        </xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 🌸 Accessor -->
+                <div class="card card-info collapsed-card p-0">
+                    <div class="card-header">
+                        <a class="card-title text-light">🌸Accessor</a>
+                
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;"> 
+                        <!-- 🌸 Create File Link Using Accessor -->
+                        <div class="card card-indigo collapsed-card p-0 ">
+                            <div class="card-header">
+                                <a class="card-title text-light">🌸Create File Link Using Accessor</a>
+                
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus text-light"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;"> 
+                                <ul>
+                                    <li>
+                                        <p>🌸Model :</p>
+                                        <div class="codeBox">
+<xmp>     
+    🌸protected $appends = [
+        'avatar_url',
+    ];
+
+    🌸public function getAvatarUrlAttribute()
+    {
+        if ($this->avatar && Storage::disk('avatars')->exists($this->avatar)) {
+            return Storage::disk('avatars')->url($this->avatar);
+        }
+
+        return asset('image/noimage.png');
+    }
+</xmp>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>🌸config/filesystem.php :</p>
+                                        <div class="codeBox">
+<xmp>     
+    🌸'disks' => [
+
+        'avatars' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/avatars'),
+            'url' => env('APP_URL').'/storage/avatars',
+            'visibility' => 'public',
+        ],
+
+    ]
+
+    🌸'links' => [
+        public_path('storage/avatars') => storage_path('app/public/avatars'),
+    ],
+</xmp>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>🌸Now use created image link. Thats why :</p>
+                                        <div class="codeBox">
+<xmp>     
+    🌸<img src="{{ $user['avatar_url'] }}" style="width: 70px; height:70px;">
+
+</xmp>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 🌸 Dynamically add class with geting data from database using Accessor -->
+                        <div class="card collapsed-card p-0">
+                            <div class="card-header bg-teal">
+                                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/906540005bbbec66c399e48447ea2e6d492c8702" target="_blank">🌸 Dynamically add class with geting data from database using Accessor :</a>
+                                <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                <ul>
+                                    <li>
+                                        <p>Blade File : </p>
+                                        <div class="codeBox">
+        <xmp> 
+            🌸<td>
+                <span class="badge badge-{{ $appoinment->status_badge}}">{{ $appoinment->status }}</span>
+            </td>
+        
+        </xmp>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a>Inside related Model :</a>
+                                        <div class="codeBox">
+        <xmp>     
+            🌸// Show Appoinment badge Dynamacally
+            public function getStatusBadgeAttribute()
+            {
+                $badges = [
+                    'SCHEDULED' => 'primary',
+                    'CLOSED' => 'success',
+                ];
+        
+                return $badges[$this->status];
+            }
+        
+        </xmp>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!--🌸 Formate Date & Time Using Accessor prossess with Carbon & macro -->
+                        <div class="card collapsed-card p-0">
+                            <div class="card-header bg-indigo">
+                                <a href="https://github.com/ShishirBhuiyan/Livewire/commit/cf0ba59bbdd31b19ec30d1c4df853ae8339846f2" target="_blank">🌸 Formate Date & Time Using Accessor prossess with Carbon & macro :</a>
+                                <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                <ul>
+                                    <li>
+                                        <p>Blade File : </p>
+                                        <div class="codeBox">
+        <xmp> 
+            🌸<td>{{ $appoinment->date }}</td>
+            🌸<td>{{ $appoinment->time }}</td>
+        
+        </xmp>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a>Create macro with Carbon in appServiceProvider :</a>
+                                        <div class="codeBox">
+        <xmp>     
+            🌸public function boot()
+            {
+                Carbon::macro('toFormattedDate', function () {
+                    return $this->format('d-M-Y');
+                });
+        
+            🌸Carbon::macro('toFormattedTime', function () {
+                    return $this->format('h:i A');
+                });
+            }
+        
+        </xmp>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a>Inside related Model :</a>
+                                        <div class="codeBox">
+        <xmp>     
+            🌸 // Date Accessor with Carbon
+            public function getDateAttribute($value)
+            {
+                return Carbon::parse($value)->toFormattedDate();
+            }
+        
+            🌸 // Time Accessor with Carbon
+            public function getTimeAttribute($value)
+            {
+                return Carbon::parse($value)->toFormattedTime();
+            }
+        
+        </xmp>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a>Also cast variable :</a>
+                                        <div class="codeBox">
+        <xmp>     
+            🌸 // Date Accessor with Carbon
+            public function getDateAttribute($value)
+            {
+                return Carbon::parse($value)->toFormattedDate();
+            }
+        
+            🌸 // Time Accessor with Carbon
+            public function getTimeAttribute($value)
+            {
+                return Carbon::parse($value)->toFormattedTime();
+            }
+        
+        </xmp>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 🌸 Muitators -->
+                <div class="card card-info collapsed-card p-0">
+                    <div class="card-header">
+                        <a class="card-title text-light">🌸Mutators</a>
+                
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;"> 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+  </div><!-- Put Avove -->
+
+
+  
+  <!--🌸 Intalation -->
+  <div id="intalation" class="content tabcontent" style="display: block;">
+    <p style="margin-bottom: 15px !important;
+    margin-left: 10px;"><strong >Shishir | Livewire</strong></p>
+
+    <!-- 🌸Run C/C++ in VS code -->
+    <div class="card collapsed-card p-0 ">
+        <div class="card-header">
+            <a href="https://www.youtube.com/watch?v=77v-Poud_io" class="card-title" target="_blank">🌸Run C/C++ in VS code</a>
+    
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-body" style="display: none;">
+            <!-- 🌸 install MinGW-w64 -->
+            <div class="card card-info collapsed-card p-0 m-2">
+                <div class="card-header">
+                    <a href="https://www.youtube.com/watch?v=0HD0pqVtsmw" class="card-title text-dark">🌸Install MinGW-w64</a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;"> 
+                    <div class="codeBox">
+                        <ul>
+                            <li>
+                                <a href="https://www.msys2.org/" target="_blank">Download MSYs2.exe</a>
+                            </li>
+                            <li>Install this is as general instalation process</li>
+                            <li>
+                                <p>Update the package database and base packages</p>
+                                <div class="codeBox">
+                                    First run : pacman -Syu
+                                </div>
+                            </li>
+                            <li>Close MYSs2 terminal. Open it from start panel again</li>
+                            <li>
+                                <p>Update rest of the base packages </p>
+                                <div class="codeBox">
+                                    Run : pacman -Su
+                                </div>
+                            </li>
+                            <li>
+                                <p>Now open up the Msys MinGW terminal,To install gcc and g++ for C and C++ </p>
+                                <div class="codeBox">
+                                    Run for 64bit : pacman -S mingw-w64-x86_64-gcc <br>
+                                    Run for 32bit : pacman -S mingw-w64-i686-gcc
+                                </div>
+                            </li>
+                            <li>
+                                <p>To install the debugger ( gdb ) for C and C++</p>
+                                <div class="codeBox">
+                                    Run for 64bit : pacman -S mingw-w64-x86_64-gdb<br>
+                                    Run for 32bit : pacman -S mingw-w64-i686-gdb
+                                </div>
+                            </li>
+                            <li>
+                                <p>Set veriable path your machine</p>
+                                <div class="codeBox">
+                                    > Goto :      C:\msys64\mingw64\bin<br>
+                                    > Search Edit Environmental veriavle in your system.<br>
+                                    > Environment veriable<br>
+                                    > System veriable<br>
+                                    > Click path<br>
+                                    > Click Edit<br>
+                                    > Click New<br>
+                                    > Paste C:\msys64\mingw64\bin<br>
+                                    > Click Ok Ok Ok <br>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Check Installed All Requirement Version, if you all done</p>
+                                <div class="codeBox">
+                                    gcc version : gcc --version<br>
+                                    g++ version : g++ --version<br>
+                                    gdb version : gdb --version<br>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 🌸 -->
+            <div class="card card-info collapsed-card p-0 m-2">
+                <div class="card-header">
+                    <a class="card-title text-dark">🌸Here...</a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;"> 
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+
+
+         <!-- jQuery -->
+         <script src="Asset/js/jquery.min.js"></script>
+
+         <!-- AdminLTE App -->
+         <script src="Asset/js/adminlte.js"></script>
+         
+         <!-- Larvel playgground to show code -->
+         <script type="text/javascript" src="https://embed.laravelplayground.com"></script>
+
+
+        <!-- Tab & Tabcontent managemant -->
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+                
+            }
+        </script>
+
+</body>
+</html>
