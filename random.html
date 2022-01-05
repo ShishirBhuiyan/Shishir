@@ -42,9 +42,9 @@
 
 
 
-<div class="card card-info collapsed-card p-0">
+<div class="card card-indigo collapsed-card p-0">
     <div class="card-header">
-        <a class="card-title text-dark">Essential Info</a>
+        <a class="card-title text-dark">🌸Route return view</a>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
@@ -52,5 +52,15 @@
         </div>
     </div>
     <div class="card-body" style="display: none;">
+        <div class="codeBox">
+            <xmp>
+                🌸Route::get('/', function() {
+                    return view('playground', [
+                        'title' => 'Laravel Playground',
+                    ]);
+                });
+
+            </xmp>
+        </div>
     </div>
 </div>

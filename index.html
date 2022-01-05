@@ -125,22 +125,306 @@
               </div>
           </div>
           <div class="card-body" style="display: none;">
-            <div class="laravel-playground" data-theme="light" data-filename="Route with invok meathoad.php" data-hide-result="true" ><pre data-filename="index.php">&lt;?php
+            <div class="card card-indigo collapsed-card p-0">
+                <div class="card-header">
+                    <a class="card-title">🌸Route return view</a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <div class="codeBox">
+<xmp>
+    🌸Route::get('/', function() {
+        return view('playground', [
+            'title' => 'Laravel Playground',
+        ]);
+    });
 
-              Route::get(&#39;/&#39;, function() {
-                  return view(&#39;playground&#39;, [
-                      &#39;title&#39; =&gt; &#39;Laravel Playground&#39;,
-                  ]);
-              });</pre>
-              <pre data-filename="Route with invok meathoad.php">
-              // Name r Route with invok meathoad 
-              Route::get(&#39;admin/dashboard&#39;, DashboardController::class)-&gt;name(&#39;admin.dashboard&#39;);
-              </pre>
-              <pre data-filename="check link active or not.blade.php">
-              
-              // check request link and route link is same or not.If same, add a active class in this element otherwise not
-              &lt;a href=&quot;{{ route(&#39;admin.dashboard&#39;) }}&quot; class=&quot;nav-link {{ request()-&gt;is(&#39;admin/dashboard&#39;) ? &#39;active&#39;: &#39;&#39; }}&quot;&gt;Dashboard&lt;/a&gt;</pre>
-              </div> 
+</xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-indigo collapsed-card p-0">
+                <div class="card-header">
+                    <a class="card-title">🌸Name Route with invok meathoad </a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <div class="codeBox">
+<xmp>
+    🌸Route::get('admin/dashboard', DashboardController::class)->name('admin.dashboard');
+        
+    🌸public function __invoke(){
+        
+    }
+    
+</xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-indigo collapsed-card p-0">
+                <div class="card-header">
+                    <a class="card-title ">🌸check request link and route link is same or not.If same, add a active class in this element otherwise not </a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <div class="codeBox">
+<xmp>
+    🌸<a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->is('admin/dashboard') ? 'active': '' }}">Dashboard</a>
+
+</xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-indigo collapsed-card p-0">
+                <div class="card-header">
+                    <a class="card-title ">🌸check request link and route link is same or not.If same, add a active class in this element otherwise not </a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <div class="codeBox">
+<xmp>
+    🌸<a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->is('admin/dashboard') ? 'active': '' }}">Dashboard</a>
+
+</xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-indigo collapsed-card p-0">
+                <div class="card-header">
+                    <a class="card-title ">🌸Any route </a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <p class="mb-2"> This should be defiend at last</p>
+                    <div class="codeBox">
+<xmp>
+    🌸Route::any('/', function () {
+        //
+    });
+
+</xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="card collapsed-card card-indigo p-0">
+                <div class="card-header">
+                    <a href="" target="_blank">🌸Route perimeter</a>
+                    <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <!--  -->
+                    <div class="card card-info collapsed-card  p-0">
+                        <div class="card-header">
+                            <a class="card-title text-dark">🌸Required Perimeter</a>
+                    
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body" style="display: none;"> 
+                            <div class="codeBox">
+<xmp>
+    🌸Route::get('/user/{id}', function ($id) {
+        return 'User '.$id;
+    });
+
+    🌸Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+        //
+    });
+    
+</xmp>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-info collapsed-card  p-0">
+                        <div class="card-header">
+                            <a class="card-title text-dark">🌸Optional Perimeter</a>
+                    
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body" style="display: none;"> 
+                            <div class="codeBox p-3">
+                                Occasionally you may need to specify a route parameter that may not always be present in the URI. You may do so by placing a ? mark after the parameter name. Make sure to give the route's corresponding variable a default value:
+                            </div>
+                            <div class="codeBox">
+<xmp>
+    🌸Route::get('/user/{name?}', function ($name = null) {
+        return $name;
+    });
+    
+    🌸Route::get('/user/{name?}', function ($name = 'John') {
+        return $name;
+    });
+
+</xmp>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card collapsed-card card-indigo p-0">
+                <div class="card-header">
+                    <a class="card-title ">🌸Encoded Forward Slash</a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;"> 
+                    <div class="codeBox p-3">
+                        The Laravel routing component allows all characters except / to be present within route parameter values. You must explicitly allow / to be part of your placeholder using a where condition regular expression:
+                    </div>
+                    <div class="codeBox">
+<xmp>
+    🌸Route::get('/search/{search}', function ($search) {
+        return $search;
+    })->where('search', '.*');
+
+</xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="card collapsed-card card-indigo p-0">
+                <div class="card-header">
+                    <a class="card-title">🌸Name route & redirect function</a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <div class="codeBox">
+<xmp>
+    🌸Route::get(
+        '/user/profile',
+        [UserProfileController::class, 'show']
+    )->name('profile');
+    return redirect()->route('profile');
+
+    🌸Route::get('/user/{id}/profile', function ($id) {
+        
+    })->name('profile');
+    return redirect()->route('profile', ['id' => 1]);
+    <!-- Result : /user/1/profile -->
+
+    🌸If you pass additional parameters in the array, those key / value pairs will automatically be added to the generated URL's query string:
+    Route::get('/user/{id}/profile', function ($id) {
+    
+    })->name('profile');
+    return redirect()->route('profile', ['id' => 1, 'photos' => 'yes']);
+    <!-- result ; /user/1/profile?photos=yes -->
+    
+</xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="card collapsed-card card-indigo p-0">
+                <div class="card-header">
+                    <a class="card-title">🌸Add middleware</a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <p class="mb-2">Middleware are executed in the order they are listed in the array:</p>
+                    <div class="codeBox">
+<xmp>
+    🌸Route::middleware(['first', 'second'])->group(function () {
+
+    });
+
+</xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="card collapsed-card card-indigo p-0">
+                <div class="card-header">
+                    <a class="card-title">🌸Add prefix</a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <div class="codeBox">
+<xmp>
+    <!-- Genarel Route Prefixes -->
+    🌸Route::prefix('admin')->group(function () {
+        Route::get('/users', function () {
+
+            // Matches The "/admin/users" URL
+
+        });
+    });
+
+    <!-- Name Route Prefixes -->
+    🌸Route::name('admin.')->group(function () {
+        Route::get('/users', function () {
+
+            // Route assigned name "admin.users"...
+
+        })->name('users');
+    });
+    
+</xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="card collapsed-card card-indigo p-0">
+                <div class="card-header">
+                    <a class="card-title">🌸Route Model Binding</a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                    <p class="mb-2">When injecting a model ID to a route or controller action, you will often query the database to retrieve the model that corresponds to that ID. Laravel route model binding provides a convenient way to automatically inject the model instances directly into your routes. For example, instead of injecting a user's ID, you can inject the entire User model instance that matches the given ID.</p>
+                    <div class="codeBox">
+<xmp>
+    🌸use App\Models\User;
+
+    🌸Route::get('/users/{user}', function (User $user) {
+        return $user->email;
+    });
+    
+</xmp>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
         
@@ -217,9 +501,10 @@
                 <ul>
                     <li><a href="">Create Controller</a> :  
                         <div class="codeBox">
-                            <xmp>
-                                php artisan make:controller Admin/DashboardController --invokable
-                            </xmp>
+<xmp>
+    php artisan make:controller Admin/DashboardController --invokable
+    
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -241,9 +526,10 @@
                 <ul>
                     <li><a href="">Install Livewire</a> :  
                         <div class="codeBox">
-                            <xmp>
-                                composer require livewire/livewire
-                            </xmp>
+<xmp>
+    composer require livewire/livewire
+
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -276,7 +562,7 @@
         <!-- 🌸Fortify Login System -->
         <div class="card collapsed-card p-0">
             <div class="card-header">
-                <a target="_blank" href="">🌸Fortify Login System</a>
+                <a target="_blank" href="">🌸Fortify Login Logout System</a>
                 <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
                 </button>
@@ -286,47 +572,301 @@
                 <ul>
                     <li>Install Package :  
                         <div class="codeBox">
-                            <xmp>
-                                composer require laravel/fortify
-                            </xmp>
+<xmp>
+    🌸composer require laravel/fortify
+
+</xmp>
                         </div>
                     </li>
                     <li>Publish Fortify : 
                         <div class="codeBox">
-                            <xmp>
-                                    php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
-                            </xmp>
+<xmp>
+    🌸php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
+
+</xmp>
                         </div>
                     </li>
                     <li>Mgrate : 
                         <div class="codeBox">
-                            <xmp>
-                                php artisan migrate
-                            </xmp>
+<xmp>
+    🌸php artisan migrate
+
+</xmp>
                         </div>
                     </li>
                     <li>Add Fortify Service Provider (app/config/app.php) providers array :  
                         <div class="codeBox">
-                            <xmp>    
-                                    App\Providers\FortifyServiceProvider::class,
-                            </xmp>
+<xmp>    
+    🌸App\Providers\FortifyServiceProvider::class,
+
+</xmp>
                         </div>
                     </li>
                     <li>Then go to (app/Providers/FortifyServiceProvider.php) :
                         <div class="codeBox">
-                            <xmp>
-                                public function boot()
-                                {
-                                    Fortify::loginView(function () {
-                                        return view('auth.login');
-                                    });
-                                }
-                            </xmp>
+<xmp>
+    🌸public function boot()
+    {
+        Fortify::loginView(function () {
+            return view('auth.login');
+        });
+    }
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>Change laravel default home route from (app/providers/RouteServiceProvider.php) to show your custom login blade file :  
+                        <div class="codeBox">
+<xmp>    
+    <!-- Default : -->
+    🌸public const HOME = '/home';
+    <!-- After changing it can be like this : -->
+    🌸public const HOME = '/admin/dashboard';
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>Now add middleware to your route , thats why only authenticated user can access this route.That means if user not login , ha can not make any perform, as a admin or other role.  
+                        <div class="codeBox">
+<xmp>    
+    🌸Route::group(['middleware' => 'auth'],function (){
+
+        Route::get('admin/dashboard', DashboardController::class)->name('admin.dashboard');
+        Route::get('admin/users', ListUser::class)->name('admin.users');
+        Route::get('admin/appoinments', ListAppoinments::class)->name('admin.appoinments');
+        Route::get('admin/appoinments/create', CreateAppoinmentsForm::class)->name('admin.appoinments.create');
+        Route::get('admin/appoinment/{PassAppoinment}/edit', UpdateAppoinmentsForm::class)->name('admin.appoinments.edit');
+
+    });
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>Show authenticated user photo & name after login visible page:  
+                        <div class="codeBox">
+<xmp>    
+    <!-- avater_url come form accessor -->
+    🌸 {{ auth()->user()->avatar_url }}
+    🌸 {{ auth()->user()->name }}
+
+</xmp>
+                        </div>
+                    </li>
+                    <li>User Logout:  
+                        <div class="codeBox">
+<xmp>    
+    🌸<li class="nav-item">
+        <form method="POST" action="{{ route('logout') }}">
+          @csrf
+          <a href="" onclick="event.preventDefault(); this.closest('form').submit();" class="nav-link">
+            <i class="nav-icon fas fa-sign-out-alt"></i>
+            <p>
+              Logout
+            </p>
+          </a>
+        </form>
+    </li>
+    
+</xmp>
+                        </div>
+                    </li>
+                    <li>Add admin role with authe user.Thats why if user role is admin he can login.</li>
+
+                    <li> Create administrator middleware 
+                        <div class="codeBox">
+<xmp>    
+    🌸 php artisan:make middleware administrator
+
+</xmp>
+                        </div>
+                    </li>
+
+                    <li> Then go to app  'app/http/middleware/administrator'
+                        <div class="codeBox">
+<xmp>    
+    🌸public function handle(Request $request, Closure $next)
+    {
+        <!-- Next request means after login, dashboard page -->
+        if (auth()->check() && auth()->user()->isAdmin()) {
+            return $next($request);
+        }
+        <!-- If authenticated is not verfied redirect to error page -->
+        return redirect('/error');
+    }
+
+
+    🌸Route::get('error', [ErrorController::class, 'errors'])->name('error');
+
+
+    🌸class ErrorController extends Controller
+    {
+        public function errors(){
+           return view('errorsBlade.error');
+        }
+    }
+
+</xmp>
+                        </div>
+                    </li>
+
+                    <li>
+                        <p>errror.blade.php</p>
+                        <div class="codeBox">
+<xmp>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<title>Error</title>
+
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+
+<style>
+* {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+body {
+padding: 0;
+margin: 0;
+}
+
+#notfound {
+position: relative;
+height: 100vh;
+}
+
+#notfound .notfound {
+position: absolute;
+left: 50%;
+top: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+.notfound {
+max-width: 410px;
+width: 100%;
+text-align: center;
+}
+
+.notfound .notfound-404 {
+height: 280px;
+position: relative;
+z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+font-family: 'Montserrat', sans-serif;
+font-size: 230px;
+margin: 0px;
+font-weight: 900;
+position: absolute;
+left: 50%;
+-webkit-transform: translateX(-50%);
+-ms-transform: translateX(-50%);
+transform: translateX(-50%);
+background: url( ) no-repeat;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-size: cover;
+background-position: center;
+}
+
+
+.notfound h2 {
+font-family: 'Montserrat', sans-serif;
+color: #000;
+font-size: 24px;
+font-weight: 700;
+text-transform: uppercase;
+margin-top: 0;
+}
+
+.notfound p {
+font-family: 'Montserrat', sans-serif;
+color: #000;
+font-size: 14px;
+font-weight: 400;
+margin-bottom: 20px;
+margin-top: 0px;
+}
+
+.notfound a {
+font-family: 'Montserrat', sans-serif;
+font-size: 14px;
+text-decoration: none;
+text-transform: uppercase;
+background: #0046d5;
+display: inline-block;
+padding: 15px 30px;
+border-radius: 40px;
+color: #fff;
+font-weight: 700;
+-webkit-box-shadow: 0px 4px 15px -5px #0046d5;
+box-shadow: 0px 4px 15px -5px #0046d5;
+}
+
+
+@media only screen and (max-width: 767px) {
+.notfound .notfound-404 {
+height: 142px;
+}
+.notfound .notfound-404 h1 {
+font-size: 112px;
+}
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div id="notfound">
+<div class="notfound">
+<div class="notfound-404">
+<h1>Oops!</h1>
+</div>
+<h2>404 - Page not found</h2>
+<p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
+<a href="/">Go To Homepage</a>
+</div>
+</div>
+
+</body>
+
+</html>
+
+</xmp>
                         </div>
                     </li>
                 </ul>
             </div>
-        </div>       
+        </div>   
+
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a class="card-title text-dark">🌸Essential Info</a>
+        
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+
+            </div>
+        </div>    
         
         <!-- 🌸ServiceProvider -->
         <div class="card collapsed-card p-0">
@@ -343,22 +883,24 @@
                     <li>
                         <a href="">Create Service Provider</a> :  
                         <div class="codeBox">
-                            <xmp>
-                                php artisan make:provider BladeComponentServiceProvider
-                            </xmp>
+<xmp>
+    🌸php artisan make:provider BladeComponentServiceProvider
+
+</xmp>
                         </div>
                     </li>
                     <li>
                         <a href="">Using Laravel Blade Component Instead of extends Directive</a> <br>
                         এখানে লারাবেল ব্লেড এপ্রোচ কে কম্পোনেন্ট এ্যাপ্রোচ এ পরিবর্তন করা হয়েছে। যেখানে উল্লেখ করে দেয়া আছে যে কোন ব্লেড ফাইলকে কিভাবে কিসের মাধ্যমে  কম্পোনেন্ট আকারে ব্যাবহার করা যাবে।এজন্য প্রথমে আপনাকে একটি সার্ভিস প্রোবাইডার তৈরি করে, তার মধ্যে প্রসেসটাকে রেজিস্টার করতে হবে এবং তৈরিকৃত সার্ভিস প্রোবাইডার কে অবশ্যই (app/config/app.php) providers array তে যুক্ত করতে হবে:   
                         <div class="codeBox">
-                            <xmp>
-                                public function register()
-                                {
-                                    
-                                    Blade::component('layouts.app', 'admin-layout');
-                                }
-                            </xmp>
+<xmp>
+    public function register()
+    {
+        
+        🌸Blade::component('layouts.app', 'admin-layout');
+    }
+    
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -406,9 +948,10 @@
                     <li>
                         This command create two file.One is class file & another is view file :  
                         <div class="codeBox">
-                            <xmp>
-                                👉 php artisan make:livewire admin/users/list-user
-                            </xmp>
+<xmp>
+    👉 php artisan make:livewire admin/users/list-user
+    
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -477,23 +1020,24 @@
                     <li>
                         <a> wire_model="",wire_model_defer="" are use for pass input field value from blade file to class file.For every input typing this wire_model="" create a ajax request.If you type 50 times it create 50 ajax request.But wire_model_defer="" only create one ajax request when you submit the form</a>
                         <div class="codeBox">
-                            <xmp>
-                                👇👇
-                            </xmp>
+<xmp>
+    👇👇
+</xmp>
                         </div>
                     </li>
                     <li>
                         <div class="codeBox">
-                            <xmp>
-                                wire:model="name"
-                            </xmp>
+<xmp>
+    wire:model="name"
+
+</xmp>
                         </div>
                     </li>
                     <li>  
                         <div class="codeBox">
-                            <xmp>
-                                wire:model.defer="name"
-                            </xmp>
+<xmp>
+    wire:model.defer="name"
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -516,25 +1060,25 @@
                     <li>
                         <a> (wire:ignore,wire:ignore.self) prevent them to change, when every dom are re randerd by ajax request. But (wire:ignore) ignore this & this children dom property.Thatswhy when sensetive dom element (form)  is a children where (wire:ignore) are use, this also ignore form submit.So form not working properly. On the other hand (wire:ignore.self) only ignore self.Thatswhay it can't any impect its child dom element.</a>
                         <div class="codeBox">
-                            <xmp>
-                                👇👇
-                            </xmp>
+<xmp>
+    👇👇
+</xmp>
                         </div>
                     </li>
                     <li>
                         <div class="codeBox">
-                            <xmp>
-                                <div class="modal fade" wire:ignore.self>
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <form>
-                                                </form>                       
-                                            </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                            </xmp>
+<xmp>
+    <div class="modal fade" wire:ignore.self>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                    </form>                       
+                </div>
+            </div>
+        </div>
+        </div>
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -556,25 +1100,26 @@
                 <ul>
                     <li> 
                         <div class="codeBox">
-                            <xmp>
-                                <note>input field</note>
-                                    wire:model.defer="name"
-        
-                                <note>access form class file</note>
-                                    public $name;
-                            </xmp>
+<xmp>
+    <note>input field</note>
+        wire:model.defer="name"
+
+    <note>access form class file</note>
+        public $name;
+
+</xmp>
                         </div>
                     </li>
                     <li> 
                         <div class="codeBox">
-                            <xmp>
-                                <note>input field</note>
-                                    wire:model.defer="state.name"
-                                    wire:model.defer="state.email"
-        
-                                <note>access form class file</note>
-                                    public $state = [];
-                            </xmp>
+<xmp>
+    <note>input field</note>
+        wire:model.defer="state.name"
+        wire:model.defer="state.email"
+
+    <note>access form class file</note>
+        public $state = [];
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -597,30 +1142,31 @@
                     <li>
                         <a>First validate password then hash the password</a> :  
                         <div class="codeBox">
-                            <xmp>
-                                $validatedData = Validator::make($this->state,[
-                                'password' => 'required|confirmed'
-                                ])->validate();
-                        
-                                $validatedData['password'] = bcrypt( $validatedData['password']);
+<xmp>
+    $validatedData = Validator::make($this->state,[
+    'password' => 'required|confirmed'
+    ])->validate();
 
-                                or
+    $validatedData['password'] = bcrypt( $validatedData['password']);
 
-                                $hash = password_hash($validatedData['password'], PASSWORD_DEFAULT);
-                            </xmp>
+    or
+
+    $hash = password_hash($validatedData['password'], PASSWORD_DEFAULT);
+
+</xmp>
                         </div>
                     </li>
                     <li>
                         <a>check database password & inserted password is match or not</a> :  
                         <div class="codeBox">
-                            <xmp>     
+<xmp>     
+    $verify = password_verify($insertPassword, $hashDatabasePassword);
 
-                                $verify = password_verify($insertPassword, $hashDatabasePassword);
-                        
-                                if($verify){
-                                dd("Same Password");
-                                }
-                            </xmp>
+    if($verify){
+    dd("Same Password");
+    }
+    
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -643,34 +1189,35 @@
                     <li>
                         <a href="">Class File</a> :  
                         <div class="codeBox">
-                            <xmp>    
-                                
-                                public function createUser()
-                                {
-                                   session()->flash('message', 'User added successfully 😁'); 
-                            
-                                }
-                            </xmp>
+<xmp>   
+    public function createUser()
+    {
+        session()->flash('message', 'User added successfully 😁'); 
+
+    }
+    
+</xmp>
                         </div>
                     </li>
                     <li>
                         <a href="">Blade File</a> :  
                         <div class="codeBox">
-                            <xmp> 
-                                <div class="card-body">
-                                    
-                                     <div>
-                                        @if (session()->has('message'))
-                                        <div class="alert alert-warning alert-dismissible fade show mb-2" role="alert">
-                                            <strong>{{ session('message') }}</strong> 
-                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                        @endif
-                                    </div>
-                                </div>
-                            </xmp>
+<xmp> 
+    <div class="card-body">
+        
+            <div>
+            @if (session()->has('message'))
+            <div class="alert alert-warning alert-dismissible fade show mb-2" role="alert">
+                <strong>{{ session('message') }}</strong> 
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+            @endif
+        </div>
+    </div>
+    
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -693,27 +1240,28 @@
                     <li>
                         <a href="">Class File</a> :  
                         <div class="codeBox">
-                            <xmp>    
-                                
-                                public function createUser()
-                                {
-                                    $this->dispatchBrowserEvent('AddUserModalClose',['message'=>'User added successfully']); 
-                            
-                                }
-                            </xmp>
+<xmp>  
+    public function createUser()
+    {
+        $this->dispatchBrowserEvent('AddUserModalClose',['message'=>'User added successfully']); 
+
+    }
+    
+</xmp>
                         </div>
                     </li>
                     <li>
                         <a href="">Blade File</a> :  
                         <div class="codeBox">
-                            <xmp> 
-                                <script>
-                                    // Modal close when form is submitted
-                                    window.addEventListener('AddUserModalClose', event =>{
-                                            $('#addUserForm').modal('hide');
-                                    });
-                                </script>
-                            </xmp>
+<xmp> 
+<script>
+    // Modal close when form is submitted
+    window.addEventListener('AddUserModalClose', event =>{
+            $('#addUserForm').modal('hide');
+    });
+</script>
+
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -734,70 +1282,79 @@
             <div class="card-body" style="display: none;">
                 <ul>
                     <li>
+                        <div class="codeBox p-3">
+                            <a target="_blank" href="https://codeseven.github.io/toastr/demo.html">Visite toast alert website</a>
+                        </div>
+                    </li>
+                    <li>
                         <a href="">CDN Link</a> :  
                         <div class="codeBox">
-                            <xmp>  
-                                {{-- For Tostar Message css Cdn Link--}}
-                                <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
+<xmp>  
+    {{-- For Tostar Message css Cdn Link--}}
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
 
-                                
-                                {{-- For Tostar Message Js cdn link--}}
-                                <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
-                            </xmp>
+    
+    {{-- For Tostar Message Js cdn link--}}
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    
+</xmp>
                         </div>
                     </li>
                     <li>
                         <a href="https://codeseven.github.io/toastr/demo.html">For Configuration</a> :  
                         <div class="codeBox">
-                            <xmp> 
-                                <script>
-                                    toastr.options = {
-                                      "closeButton": true,
-                                      "debug": false,
-                                      "newestOnTop": true,
-                                      "progressBar": true,
-                                      "positionClass": "toast-top-right",
-                                      "preventDuplicates": false,
-                                      "onclick": null,
-                                      "showDuration": "300",
-                                      "hideDuration": "1000",
-                                      "timeOut": "5000",
-                                      "extendedTimeOut": "1000",
-                                      "showEasing": "swing",
-                                      "hideEasing": "linear",
-                                      "showMethod": "fadeIn",
-                                      "hideMethod": "fadeOut"
-                                    }
-                                  </script>
-                            </xmp>
+<xmp> 
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        </script>
+        
+</xmp>
                         </div>
                     </li>
                     <li>
                         <a >Create Browser Event</a> :  
                         <div class="codeBox">
-                            <xmp>  
-                                public function createUser()
-                                {
-                                  // Pass message for alert
-                                  $this->dispatchBrowserEvent('AddUserModalClose',['message'=>'User added successfully']);
-                            
-                                }
-                            </xmp>
+<xmp>  
+    public function createUser()
+    {
+        // Pass message for alert
+        $this->dispatchBrowserEvent('AddUserModalClose',['message'=>'User added successfully']);
+
+    }
+    
+</xmp>
                         </div>
                     </li>
                     <li>
                         <a >Listen Browser Event</a> :  
                         <div class="codeBox">
-                            <xmp>  
-                                <script>
-                                window.addEventListener('AddUserModalClose', event =>{
-                                        $('#addUserForm').modal('hide');
+<xmp>  
+    <script>
+    window.addEventListener('AddUserModalClose', event =>{
+            $('#addUserForm').modal('hide');
 
-                                    // Show toast notification alert
-                                    toastr.success(event.detail.message, 'Success!');
-                                });
-                                </script>
-                            </xmp>
+        // Show toast notification alert
+        toastr.success(event.detail.message, 'Success!');
+    });
+    </script>
+    
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -818,9 +1375,10 @@
                 <ul>
                     <li><a href="https://www.youtube.com/watch?v=Y5lRWyDfnE4">🌸Fatal error: Uncaught Error: Failed opening required 'C:\Users\ASUS\Desktop\Github\Livewire/vendor/autoload.php</a> :  
                         <div class="codeBox">
-                            <xmp>
-                                composer update
-                            </xmp>
+<xmp>
+    composer update
+
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -842,13 +1400,14 @@
                 <ul>
                     <li><a href="https://github.com/ShishirBhuiyan/Livewire/commit/9f5022d0f88785ed9e09cf6c6c962ff473fb8bd3">🌸Rset form when again form modal is open</a> :  
                         <div class="codeBox">
-                            <xmp>    
-                                public function openAddUserModal()
-                                {    
-                                  // Reset form when form modal is open
-                                   $this->reset();
-                                }
-                            </xmp>
+<xmp>    
+    public function openAddUserModal()
+    {    
+        // Reset form when form modal is open
+        $this->reset();
+    }
+    
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -872,53 +1431,55 @@
                         <a>Get Dtata From Database With specific number</a> <br>
                         <p>Class File</p>  
                         <div class="codeBox">
-                            <xmp>    
-                                public function render()
-                                {       
-                                
-                                // Retrive data
-                                  $users = User::latest()->paginate(2);
+<xmp>    
+    public function render()
+    {       
 
-                                // pass in view
-                                  return view('livewire.admin.users.list-user',[
-                                    'users' => $users,
-                                  ]);
-                                }
-                            </xmp>
+    // Retrive data
+    $users = User::latest()->paginate(2);
+
+    // pass in view
+    return view('livewire.admin.users.list-user',[
+    'users' => $users,
+    ]);
+    }
+
+</xmp>
                         </div>
                     </li>
                     
                     <li>
                         <p>view file</p>  
                         <div class="codeBox">
-                            <xmp>  
-                                <tbody wire:loading.class="searchLoading">
-                                    @forelse ($users as $key => $user)
-                                        <tr>
-                                        <th scope="row">{{ $key + 1 }}</th>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        <td>
-                                            <a href="" wire:click.prevent="userEdit({{ $user }})">
-                                                <i class="fas fa-edit text-warning m2-2"></i>
-                                            </a>
-                                            <a href="" wire:click.prevent="userDelete({{ $user->id }})">
-                                                <i class="fas fa-trash text-danger"></i>
-                                            </a>
-                                        </td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="5" class="text-center">
-                                                 <img src="{{ asset('image/search.svg') }}" alt="">
-                                                 <br><br>
-                                                 <p>No Results Found</p>
-                                            </td>         
-                                        </tr>
+<xmp>  
+    <tbody wire:loading.class="searchLoading">
+        @forelse ($users as $key => $user)
+            <tr>
+            <th scope="row">{{ $key + 1 }}</th>
+            <td>{{ $user->name }}</td>
+            <td>{{ $user->email }}</td>
+            <td>
+                <a href="" wire:click.prevent="userEdit({{ $user }})">
+                    <i class="fas fa-edit text-warning m2-2"></i>
+                </a>
+                <a href="" wire:click.prevent="userDelete({{ $user->id }})">
+                    <i class="fas fa-trash text-danger"></i>
+                </a>
+            </td>
+            </tr>
+            @empty
+            <tr>
+                <td colspan="5" class="text-center">
+                        <img src="{{ asset('image/search.svg') }}" alt="">
+                        <br><br>
+                        <p>No Results Found</p>
+                </td>         
+            </tr>
+
+        @endforelse
+    </tbody>
     
-                                    @endforelse
-                                </tbody>
-                            </xmp>
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -960,6 +1521,7 @@
         $user->delete();
         $this->dispatchBrowserEvent('hideDeleteUserModal',['message'=>'User Deleted successfully']);
     }
+
 </xmp>
                         </div>
                     </li>
@@ -1031,7 +1593,6 @@
                         <a>Class File :</a>  
                         <div class="codeBox">
 <xmp>  
-
     🌸public $showEditModal = false;
     
     🌸public function showEditUserModal( User $user)
@@ -1064,7 +1625,8 @@
     
             $this->user->update($validatedData);
             $this->dispatchBrowserEvent('Add_Edit_UserModalClose',['message'=>'User Updated successfully']);
-        }
+    }
+
 </xmp>
                         </div>
                     </li>
@@ -1127,28 +1689,30 @@
                     <li>
                         <a>Class File :</a>  
                         <div class="codeBox">
-        <xmp>  
-            🌸 // For Livewire Pagination system
-            use Livewire\withPagination;
-            
-            🌸 // Livewire default pagination.This stop pagination browser refresh.Without this, painating also work but there page was refresing issue. 
-            use withPagination;
-        
-            // By default , Livewire pagination use Tailwind css Theme.But here we use bootstrap Theme.
-            //If you want to use Tailwind CSS Theme bydefault uou dont need this line of code  
-            protected $paginationTheme = 'bootstrap';
-        </xmp>
+<xmp>  
+    🌸 // For Livewire Pagination system
+    use Livewire\withPagination;
+    
+    🌸 // Livewire default pagination.This stop pagination browser refresh.Without this, painating also work but there page was refresing issue. 
+    use withPagination;
+
+    // By default , Livewire pagination use Tailwind css Theme.But here we use bootstrap Theme.
+    //If you want to use Tailwind CSS Theme bydefault uou dont need this line of code  
+    protected $paginationTheme = 'bootstrap';
+
+</xmp>
                         </div>
                     </li>
                     <li>
                         <a>Blade File :</a>  
                         <div class="codeBox">
-        <xmp> 
-        🌸{{-- Laravel default paginating. This also required for livewire pagination --}}
-        <div class="card-footer d-flex justify-content-end">
-            {{ $users->links() }}
-        </div>
-        </xmp>
+<xmp> 
+🌸{{-- Laravel default paginating. This also required for livewire pagination --}}
+<div class="card-footer d-flex justify-content-end">
+    {{ $users->links() }}
+</div>
+
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -1190,7 +1754,6 @@
                         <a>Blade File :</a>  
                         <div class="codeBox">
 <xmp> 
-    
     🌸namespace App\Http\Livewire\Admin\Users;
     
     🌸use  App\Http\Livewire\Admin\AdminComponent;
@@ -1199,6 +1762,7 @@
     {
         <!-- Code........ -->
     }
+
 </xmp>
                         </div>
                     </li>
@@ -1224,6 +1788,7 @@
                         <div class="codeBox">
 <xmp>  
     🌸php artisan make:seeder SeederName
+
 </xmp>
                         </div>
                     </li>
@@ -1231,7 +1796,6 @@
                         <a>Secondly go to SeederName.php :</a>  
                         <div class="codeBox">
 <xmp> 
-
 🌸// Import this three alias
     use Illuminate\Support\Facades\DB;
     use Illuminate\Support\Str;
@@ -1260,6 +1824,7 @@
             SeederName::class
         ]);
     }
+
 </xmp>
                         </div>
                     </li>
@@ -1269,6 +1834,7 @@
 <xmp>      
     🌸composer dump-autoload
     🌸php artisan db:seed
+
 </xmp>
                         </div>
                     </li>
@@ -1308,6 +1874,7 @@
     <!-- For daterangepicker -->
     <script src="{{ asset('Asset/plugin/moment/moment.min.js') }}"></script>
     <script src="{{ asset('Asset/plugin/daterangepicker/daterangepicker.js') }}"></script>
+
 </xmp>
                         </div>
                     </li>
@@ -1366,6 +1933,7 @@
             });
         </script>  
     @endpush
+
 </xmp>
                         </div>
                     </li>
@@ -1379,6 +1947,7 @@
     {
         ModelName::create($this->state);
     }
+
 </xmp>
                         </div>
                     </li>
@@ -1390,6 +1959,7 @@
     protected $casts = [
         'date' => 'datetime',
     ];
+
 </xmp>
                         </div>
                     </li>
@@ -1429,6 +1999,7 @@
     <!-- For daterangepicker -->
     <script src="{{ asset('Asset/plugin/moment/moment.min.js') }}"></script>
     <script src="{{ asset('Asset/plugin/daterangepicker/daterangepicker.js') }}"></script>
+
 </xmp>
                         </div>
                     </li>
@@ -1488,6 +2059,7 @@
             });
         </script>  
     @endpush
+
 </xmp>
                         </div>
                     </li>
@@ -1501,6 +2073,7 @@
     {
         ModelName::create($this->state);
     }
+
 </xmp>
                         </div>
                     </li>
@@ -1512,6 +2085,7 @@
     protected $casts = [
         'time' => 'datetime',
     ];
+
 </xmp>
                         </div>
                     </li>
@@ -1535,55 +2109,58 @@
                     <li>
                         <p>Page Blade File:</p>
                         <div class="codeBox">
-        <xmp> 
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="appointmentTime">Appointment Time</label>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-clock"></i></span>
-                        </div>
-                        
-                        // state is deffine in according class file
-                        <x-timePicker wire:model.defer="state.time" id="appointmentTime" />
-
-                    </div>                                            
+<xmp> 
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="appointmentTime">Appointment Time</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-clock"></i></span>
                 </div>
-            </div>
-        </xmp>
+                
+                // state is deffine in according class file
+                <x-timePicker wire:model.defer="state.time" id="appointmentTime" />
+
+            </div>                                            
+        </div>
+    </div>
+
+</xmp>
                         </div>
                     </li>
                     <li>
                         <p>Component Blade File:</p>
                         <div class="codeBox">
-        <xmp>
-            <input {{ $attributes }} type="text" class="form-control datetimepicker-input" id="{{ $id }}" data-toggle="datetimepicker" data-target="#{{ $id }}"
-            onchange="this.dispatchEvent(new InputEvent('input'))"
-            />
-            
-                @push('scripts')
-                    <script type="text/javascript">
-                            $('#{{ $id }}').datetimepicker({
-                                format:'LT',
-                            });
-                    </script>    
-                @endpush
-        </xmp>
+<xmp>
+    <input {{ $attributes }} type="text" class="form-control datetimepicker-input" id="{{ $id }}" data-toggle="datetimepicker" data-target="#{{ $id }}"
+    onchange="this.dispatchEvent(new InputEvent('input'))"
+    />
+    
+        @push('scripts')
+            <script type="text/javascript">
+                    $('#{{ $id }}').datetimepicker({
+                        format:'LT',
+                    });
+            </script>    
+        @endpush
+        
+</xmp>
                         </div>
                     </li>
                     <li>
                         <p>Component Class File :</p>
                         <div class="codeBox">
-        <xmp>
-            🌸 public $id;
+<xmp>
+    🌸 public $id;
 
-            // argument ($id) is a id="appointmentTime" 
-            🌸 public function __construct($id)
-            {
-                //$this->id means public $id;
-                $this->id = $id;
-            }
-        </xmp>
+    // argument ($id) is a id="appointmentTime" 
+    🌸 public function __construct($id)
+    {
+        //$this->id means public $id;
+        $this->id = $id;
+    }
+    
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -1663,6 +2240,7 @@
             });
         </script>  
     @endpush
+
 </xmp>
                         </div>
                     </li>
@@ -1720,6 +2298,7 @@
     <input {{ $attributes }} type="text" class="form-control datetimepicker-input" id="datetimepicker5" data-toggle="datetimepicker" data-target="#datetimepicker5"
 
     onchange="this.dispatchEvent(new InputEvent('input'))"/>
+
 </xmp>
                         </div>
                     </li>
@@ -1776,6 +2355,7 @@
                         <div class="codeBox">
 <xmp> 
     🌸 <x-date-picker id="appointmentStartDate"/>
+
 </xmp>
                         </div>
                     </li>
@@ -1790,6 +2370,7 @@
         //$this->componentId means public $componentId;
         $this->componentId = $id;
     }
+
 </xmp>
                         </div>
                     </li>
@@ -1838,6 +2419,7 @@
 
     //I also want to pass date class name inside error property
     🌸 <x-componentName :error="'date'" />
+
 </xmp>
                         </div>
                     </li>
@@ -1852,6 +2434,7 @@
         //$this->error means public $error;
         $this->errorName = $error;
     }
+
 </xmp>
                         </div>
                     </li>
@@ -1963,6 +2546,7 @@
                                 <div class="codeBox">
         <xmp> 
             🌸 php artisan make:migration add_color_field_to_existingTableName_table
+
         </xmp>
                                 </div>
                             </li>
@@ -2047,22 +2631,23 @@
                     <li>
                         <p>Class File :</p>
                         <div class="codeBox">
-        <xmp> 
-            🌸 use Illuminate\Support\Facades\Validator;
+<xmp> 
+    🌸 use Illuminate\Support\Facades\Validator;
 
-            🌸 Validator::make($this->state,[
-                //This filed must be required
-                'client_id' => 'required',
+    🌸 Validator::make($this->state,[
+        //This filed must be required
+        'client_id' => 'required',
 
-                // That means note can be empty
-                'note' => 'nullable',
+        // That means note can be empty
+        'note' => 'nullable',
 
-                // This status field required with only SCHEDULED,CLOSED value
-                'status' => 'required|in:SCHEDULED,CLOSED',],
+        // This status field required with only SCHEDULED,CLOSED value
+        'status' => 'required|in:SCHEDULED,CLOSED',],
 
-            // Custom Message
-            ['date.required' => 'Alert ! Shishir warning you for last time.'])->validate();
-        </xmp>
+    // Custom Message
+    ['date.required' => 'Alert ! Shishir warning you for last time.'])->validate();
+    
+</xmp>
                         </div>
                     </li>
                 </ul>
@@ -2086,6 +2671,7 @@
                         <div class="codeBox">
 <xmp> 
     🌸<textarea id="summernote"> {!! $state['note'] !!} </textarea>
+
 </xmp>
                         </div>
                     </li>
@@ -2110,6 +2696,7 @@
 <xmp> 
     🌸<a href="{{ route('admin.appoinments.edit', $PassAppoinment) }}">
         <i class="fas fa-edit text-warning m2-2"></i></a>
+
 </xmp>
                         </div>
                     </li>
@@ -2118,6 +2705,7 @@
                         <div class="codeBox">
 <xmp> 
     🌸Route::get('admin/appoinment/{PassAppoinment}/edit', UpdateAppoinmentsForm::class)->name('admin.appoinments.edit');
+
 </xmp>
                         </div>
                     </li>
@@ -2132,6 +2720,7 @@
     {
             $this->state = $PassAppoinment->toArray();
     }
+
 </xmp>
                         </div>
                     </li>
@@ -2629,44 +3218,45 @@
                                     <li>
                                         🌸Get image extention
                                         <div class="codeBox">
-        <xmp> 
-            $extension = $image->extension();
-        </xmp>
+<xmp> 
+    $extension = $image->extension();
+    
+</xmp>
                                         </div>
                                     </li>
                         
                                     <li>
                                         🌸Create custom file mame
                                         <div class="codeBox">
-        <xmp> 
-            $imageName = $name.'.'.$extension;
-        </xmp>
+<xmp> 
+    $imageName = $name.'.'.$extension;
+    
+</xmp>
                                         </div>
                                     </li>
                         
                                     <li>
                                         🌸Get File size
                                         <div class="codeBox">
-        <xmp> 
-            
-            🌸$bytes = $request->file('file')->getSize();
-            
-            🌸$MB = number_format($bytes / 1048576, 2) . ' MB';
-        
-        </xmp>
+<xmp> 
+    🌸$bytes = $request->file('file')->getSize();
+    
+    🌸$MB = number_format($bytes / 1048576, 2) . ' MB';
+
+</xmp>
                                         </div>
                                     </li>
                         
                                     <li>
                                         🌸 Check File size is greter than of 1MB or not
                                         <div class="codeBox">
-        <xmp> 
-            🌸if(intval($MB) > 1)
-            {
-                return back()->with('error', 'Image size should be  1Mb');
-            }
-            
-        </xmp>
+<xmp> 
+    🌸if(intval($MB) > 1)
+    {
+        return back()->with('error', 'Image size should be  1Mb');
+    }
+    
+</xmp>
                                         </div>
                                     </li>
                         
@@ -2678,7 +3268,7 @@
                         <!-- 🌸Image preview condition if one form use for insert & update -->
                         <div class="card card-info collapsed-card p-0">
                             <div class="card-header">
-                                <a class="card-title text-dark">🌸Image preview condition if one form use for insert & update</a>
+                                <a class="card-title text-dark">🌸Image preview condition if one form use for insert & update.</a>
                         
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
@@ -2702,6 +3292,49 @@
             @endif
         @endif
     @endif
+    
+</xmp>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 🌸Upload Progress bar process -->
+                        <div class="card card-info collapsed-card p-0">
+                            <div class="card-header">
+                                <a class="card-title text-dark">🌸Upload Progress bar process</a>
+                        
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                <div class="codeBox">
+<xmp>
+<div
+    x-data="{ isUploading: false, progress: 0 }"
+    x-on:livewire-upload-start="isUploading = true"
+    x-on:livewire-upload-finish="isUploading = false"
+    x-on:livewire-upload-error="isUploading = false"
+    x-on:livewire-upload-progress="progress = $event.detail.progress,progress: 0 "
+>
+    <div class="custom-file">
+        <input wire:model="photo" type="file"  id="customFile" />
+
+        <label class="custom-file-label" for="customFile">
+            @if ($photo)
+            <strong>{{ $photo->getClientOriginalName() }}</strong>
+            @else
+            Choose Photo
+            @endif
+        </label>
+    </div>
+
+    <!-- Progress Bar -->
+    <div x-show="isUploading"  class="w-100">
+        <progress class="w-100" max="100" x-bind:value="progress"></progress>
+    </div>
+</div>
     
 </xmp>
                                 </div>
@@ -2738,31 +3371,58 @@
         public_path('storage') => storage_path('app/public'),
         public_path('storage/avatars') => storage_path('app/public/avatars'),
     ],
+
 </xmp>
                         </div> 
                         <p>🌸Blade File </p> 
                         <div class="codeBox">
 <xmp> 
-🌸<div class="form-group">
+🌸
+<div class="form-group">
+
     <label for="cpassword">Profile Photo</label>
     
-    <!-- Image preview -->
     @if ($photo)
-        <img src="{{ $photo->temporaryUrl() }}" class="img d-block mt-2 w-100 h-50">
+     <!-- Show selected image -->
+     <img src="{{ $photo->temporaryUrl() }}" class="img d-block my-2 w-100" style="height: 250px;">
+    @else
+        @if ($showEditModal == false)
+        <!-- {{-- when add modal open nothing is showing first --}} -->
+        @else
+        <!-- {{-- When Edit modal open, show store image preview first --}} -->
+            @if ($ArrayForUserInputFieldValue)
+                <img src="{{ $ArrayForUserInputFieldValue['avatar_url'] }}" class="img d-block mt-2 w-100" style="height:250px;">
+            @endif
+        @endif
     @endif
 
+    <div
+        x-data="{ isUploading: false, progress: 0 }"
+        x-on:livewire-upload-start="isUploading = true"
+        x-on:livewire-upload-finish="isUploading = false"
+        x-on:livewire-upload-error="isUploading = false"
+        x-on:livewire-upload-progress="progress = $event.detail.progress,progress: 0 ">
 
-    <div class="custom-file">
-        <input wire:model="photo" type="file" class="custom-file-input" id="customFile">
-        <label class="custom-file-label" for="customFile">
-        <!-- When photo is selected show original name.Otherwise show Chose file -->
-            @if ($photo)
-                {{ $photo->getClientOriginalName() }}
-            @else
-                Choose file
-            @endif
-        </label>
+        <!-- {{-- Input field style using admin lte template --}} -->
+        <div class="custom-file">
+            <input wire:model="photo" type="file"  id="customFile" />
+
+            <label class="custom-file-label" for="customFile">
+                @if ($photo)
+                <strong>{{ $photo->getClientOriginalName() }}</strong>
+                @else
+                Choose Photo
+                @endif
+            </label>
+        </div>
+    
+        <!-- Progress Bar -->
+        <div x-show="isUploading"  class="w-100">
+            <progress class="w-100" max="100" x-bind:value="progress"></progress>
+        </div>
     </div>
+
+
 </div>
 
 </xmp>
@@ -2779,31 +3439,66 @@
     🌸use  WithFileUploads;
 
     🌸public $photo;
-    public $name;
+      public $name;
+      public $photoCheck = false;
 
     🌸public function createUser()
     {
-        <!-- Get file name extention -->
-        $photoExtention = $this->photo->extension();
-
-        <!-- Create custom file name -->
-        $imageName = $this->name.'.'.$photoExtention
-
-        <!-- before store file, check file already exist or not -->
-        <!-- This is check public folder -->
-        $check_old_image = public_path("storage/avatars/$imageName");
-        <!-- we can also check in (storage_patch). Thats time its look like this: storage_path("app/public/avatars/$imageName")-->
-
-        <!-- If exist, delete this file -->
-        if(File::exists($check_old_image)) {
-            File::delete($check_old_image);
+        <!-- Image validation -->
+        if($this->photo){
+            $extention = $this->photo->extension();
+            $size = number_format($this->photo->getSize() / 1048576, 2);
+            if($extention != "jpg"){
+                $this->dispatchBrowserEvent('danger',['message'=>'Image Type Should be jpg']);
+            }else{
+                if(3 >! $size){
+                    $this->dispatchBrowserEvent('danger',['message'=>'Large file selected.']);
+                }else{
+                    <!-- Now you can get permission to store and manipulation image -->
+                    $this->photoCheck = true;
+                }
+            }
+        }else{
+            $this->dispatchBrowserEvent('danger',['message'=>'Image field is empty']);
         }
 
-        <!-- this file store storage/app/public/avatars/ -->
-        <!-- And that was inked in public folder -->
-        $path = $this->photo->storeAs(
-          'public/avatars', $imageName
-        );
+
+
+        <!-- Other validation -->
+        $validatedData = Validator::make($this->selfWireModelArray,[
+            'name' => 'required',
+        ])->validate();
+
+        $validatedData['password'] = password_hash($validatedData['password'], PASSWORD_DEFAULT);
+
+        
+        if($this->photoCheck){
+            <!---=== create custom file mame ===----->
+            $imageName = $this->ArrayForUserInputFieldValue['name'].'.'.$this->photo->extension();
+            <!---=== check file already exist or not ===----->
+            $old_image_path = public_path("storage/avatars/$imageName");
+            
+            <!---=== If exist, delete this file ===----->
+            if(File::exists($old_image_path)) {
+                File::delete($old_image_path);
+            }
+            <!-- Store in disk -->
+            $this->photo->storeAs(
+              'public/avatars', $imageName
+            );
+
+            <!-- Pass iamge name inside valdated arey data -->
+            <!-- Here vatar database column name for store photo name -->
+            $validatedData['avatar'] = $imageName;
+
+            User::create($validatedData);
+            $this->reset();
+      
+            $this->dispatchBrowserEvent('Add_Edit_UserModalClose',['message'=>'User added successfully']);
+        }
+
+
+
     }
 
 </xmp>
@@ -2814,8 +3509,13 @@
     🌸
     <td>
         @if ($user->avatar)
-        <!-- asset() indicate public folder -->
-        <img src="{{ asset('storage/avatars/'.$user->avatar) }}" style="width: 70px; height:70px;">
+            <!-- asset() indicate public folder -->
+            <img src="{{ asset('storage/avatars/'.$user->avatar) }}" style="width: 70px; height:70px;">
+
+            or
+            
+            <img src="{{ $user['avatar_url'] }}" style="width: 70px; height:70px;">
+            <!-- to use this formate you should define accessor.Show accesor documentation -->
         @else
         <img src="{{url('image/noimage.png')}}" style="width: 70px; height:70px;" alt="">
         @endif
@@ -2873,17 +3573,19 @@
                                     </div>
                                     <div class="card-body" style="display: none;"> 
                                         <div class="codeBox">
-        <xmp> 
-            The $casts property on your model provides a convenient method of converting attributes to common data types. The supported cast types are: integer, real, float, double, string, boolean, object, array, collection, date and datetime.
-        </xmp>
+<xmp> 
+    The $casts property on your model provides a convenient method of converting attributes to common data types. The supported cast types are: integer, real, float, double, string, boolean, object, array, collection, date and datetime.
+    
+</xmp>
                                         </div>
                                         <p>For example, let's cast the is_admin attribute, which is stored in our database as an integer (0 or 1) to a boolean value:যা আমাদের ডাটাবেসে বুলিয়ান মানের পূর্ণসংখ্যা হিসাবে সংরক্ষণ করা হয়</p>
                                         <div class="codeBox">
-        <xmp>    
-            protected $casts = [
-                    'is_admin' => 'boolean',
-            ];
-        </xmp>
+<xmp>    
+    protected $casts = [
+            'is_admin' => 'boolean',
+    ];
+    
+</xmp>
                                         </div>
                                         <p>Now the is_admin attribute will always be cast to a boolean when you access it, even if the underlying value is stored in the database as an integer:</p>
                                     </div>
@@ -2901,25 +3603,27 @@
                                     <div class="card-body" style="display: none;"> 
                                         🌸<p>The array cast type is particularly useful when working with columns that are stored as serialized JSON. For example, if your database has a TEXT field type that contains serialized JSON, adding the array cast to that attribute will automatically deserialize the attribute to a PHP array when you access it on your Eloquent model:</p>
                                         <div class="codeBox">
-        <xmp> 
-            🌸protected $casts = [
-                'options' => 'array',
-            ];
-        </xmp>
+<xmp> 
+    🌸protected $casts = [
+        'options' => 'array',
+    ];
+    
+</xmp>
                                         </div>
                                         🌸<p>When you set the value of the options attribute, the given array will automatically be serialized back into JSON for storage:</p>
                                         <div class="codeBox">
-        <xmp> 
-            $user = App\User::find(1);
-        
-            $options = $user->options;
-            
-            $options['key'] = 'value';
-            
-            $user->options = $options;
-            
-            $user->save();
-        </xmp>
+<xmp> 
+    $user = App\User::find(1);
+
+    $options = $user->options;
+    
+    $options['key'] = 'value';
+    
+    $user->options = $options;
+    
+    $user->save();
+    
+</xmp>
                                         </div>
                                     </div>
                                 </div>
@@ -2938,19 +3642,21 @@
                             <div class="card-body" style="display: none;">
                                 🌸<p>If you should want to print this result As a Shishir Bhuiyan, you should $appends full_name attribute.Otherwise it is not work.</p>
                                 <div class="codeBox">
-                        <xmp>
-                            🌸protected $appends = ['full_name'];
-                        </xmp>
+<xmp>
+    🌸protected $appends = ['full_name'];
+    
+</xmp>
                                 </div> 
                                 <div class="codeBox">
-                        <xmp>
-                            🌸$this->first_name = Shishir; 
-                            🌸$this->last_name  = Bhuiyan;
-                        
-                            🌸function getFullNameAttribute() {
-                            return $this->first_name . ' ' . $this->last_name;
-                            }
-                        </xmp>
+<xmp>
+    🌸$this->first_name = Shishir; 
+    🌸$this->last_name  = Bhuiyan;
+
+    🌸function getFullNameAttribute() {
+    return $this->first_name . ' ' . $this->last_name;
+    }
+    
+</xmp>
                                 </div>
                             </div>
                         </div>
@@ -2995,6 +3701,7 @@
 
         return asset('image/noimage.png');
     }
+
 </xmp>
                                         </div>
                                     </li>
@@ -3016,6 +3723,7 @@
     🌸'links' => [
         public_path('storage/avatars') => storage_path('app/public/avatars'),
     ],
+
 </xmp>
                                         </div>
                                     </li>
@@ -3045,30 +3753,30 @@
                                     <li>
                                         <p>Blade File : </p>
                                         <div class="codeBox">
-        <xmp> 
-            🌸<td>
-                <span class="badge badge-{{ $appoinment->status_badge}}">{{ $appoinment->status }}</span>
-            </td>
-        
-        </xmp>
+<xmp> 
+    🌸<td>
+        <span class="badge badge-{{ $appoinment->status_badge}}">{{ $appoinment->status }}</span>
+    </td>
+
+</xmp>
                                         </div>
                                     </li>
                                     <li>
                                         <a>Inside related Model :</a>
                                         <div class="codeBox">
-        <xmp>     
-            🌸// Show Appoinment badge Dynamacally
-            public function getStatusBadgeAttribute()
-            {
-                $badges = [
-                    'SCHEDULED' => 'primary',
-                    'CLOSED' => 'success',
-                ];
-        
-                return $badges[$this->status];
-            }
-        
-        </xmp>
+<xmp>     
+    🌸// Show Appoinment badge Dynamacally
+    public function getStatusBadgeAttribute()
+    {
+        $badges = [
+            'SCHEDULED' => 'primary',
+            'CLOSED' => 'success',
+        ];
+
+        return $badges[$this->status];
+    }
+
+</xmp>
                                         </div>
                                     </li>
                                 </ul>
@@ -3089,67 +3797,67 @@
                                     <li>
                                         <p>Blade File : </p>
                                         <div class="codeBox">
-        <xmp> 
-            🌸<td>{{ $appoinment->date }}</td>
-            🌸<td>{{ $appoinment->time }}</td>
-        
-        </xmp>
+<xmp> 
+    🌸<td>{{ $appoinment->date }}</td>
+    🌸<td>{{ $appoinment->time }}</td>
+
+</xmp>
                                         </div>
                                     </li>
                                     <li>
                                         <a>Create macro with Carbon in appServiceProvider :</a>
                                         <div class="codeBox">
-        <xmp>     
-            🌸public function boot()
-            {
-                Carbon::macro('toFormattedDate', function () {
-                    return $this->format('d-M-Y');
-                });
-        
-            🌸Carbon::macro('toFormattedTime', function () {
-                    return $this->format('h:i A');
-                });
-            }
-        
-        </xmp>
+<xmp>     
+    🌸public function boot()
+    {
+        Carbon::macro('toFormattedDate', function () {
+            return $this->format('d-M-Y');
+        });
+
+    🌸Carbon::macro('toFormattedTime', function () {
+            return $this->format('h:i A');
+        });
+    }
+
+</xmp>
                                         </div>
                                     </li>
                                     <li>
                                         <a>Inside related Model :</a>
                                         <div class="codeBox">
-        <xmp>     
-            🌸 // Date Accessor with Carbon
-            public function getDateAttribute($value)
-            {
-                return Carbon::parse($value)->toFormattedDate();
-            }
-        
-            🌸 // Time Accessor with Carbon
-            public function getTimeAttribute($value)
-            {
-                return Carbon::parse($value)->toFormattedTime();
-            }
-        
-        </xmp>
+<xmp>     
+    🌸 // Date Accessor with Carbon
+    public function getDateAttribute($value)
+    {
+        return Carbon::parse($value)->toFormattedDate();
+    }
+
+    🌸 // Time Accessor with Carbon
+    public function getTimeAttribute($value)
+    {
+        return Carbon::parse($value)->toFormattedTime();
+    }
+
+</xmp>
                                         </div>
                                     </li>
                                     <li>
                                         <a>Also cast variable :</a>
                                         <div class="codeBox">
-        <xmp>     
-            🌸 // Date Accessor with Carbon
-            public function getDateAttribute($value)
-            {
-                return Carbon::parse($value)->toFormattedDate();
-            }
-        
-            🌸 // Time Accessor with Carbon
-            public function getTimeAttribute($value)
-            {
-                return Carbon::parse($value)->toFormattedTime();
-            }
-        
-        </xmp>
+<xmp>     
+    🌸 // Date Accessor with Carbon
+    public function getDateAttribute($value)
+    {
+        return Carbon::parse($value)->toFormattedDate();
+    }
+
+    🌸 // Time Accessor with Carbon
+    public function getTimeAttribute($value)
+    {
+        return Carbon::parse($value)->toFormattedTime();
+    }
+
+</xmp>
                                         </div>
                                     </li>
                                 </ul>
@@ -3175,7 +3883,375 @@
         </div>
 
         
+        <!-- 🌸 Validation Rulles -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <a class="card-title">🌸Validation Rulles</a>
         
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;"> 
+                <div class="codeBox">
+<xmp>
+    <!-- (required & should be valid email type) -->
+    'email' => 'required|email',
+
+    <!-- (Photo 1MB max, and only pngs, jpegs.) -->
+    'photo' => 'image|mimes:png,jpg|max:1024',
+    
+    <!-- (Fole 100MB max, and only pngs, jpegs, and pdfs.) -->
+    'file' => 'file|mimes:png,jpg,pdf|max:102400', 
+    
+</xmp>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 🌸 Cache Clear -->
+        <div class="card collapsed-card p-0">
+            <div class="card-header">
+                <p class="card-title">🌸 Page Loading indicator setup</p>
+
+                <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="card-body" style="display: none;">
+
+                <div class="card card-indigo collapsed-card p-0">
+                    <div class="card-header">
+                        <a class="card-title">🌸Essential Info</a>
+                
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;">
+                        <div class="codeBox p-3" style="margin-bottom: 10px !important;">
+                            <a target="_blank" href="https://laravel-livewire.com/docs/2.x/loading-states">Visite Livewire Loading documentation</a>
+                        </div>
+                        <div class="codeBox p-3 mt-2">
+                            <ul>
+                                <li>Delaying loading indicator</li>
+                                <li>Targeting specific actions</li>
+                                <li>Targeting models</li>
+                                <li>Toggling classes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-info collapsed-card p-0">
+                    <div class="card-header">
+                        <a target="_blank" href="https://labs.danielcardoso.net/load-awesome/animations/ball-clip-rotate.html">🌸 website for page loader </a>
+                
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-body" style="display: none;">
+                        <div class="codeBox">
+<xmp>
+    🌸Choice loader animation. Select size. Coppy. Html and css code.Paste it where you want
+
+</xmp>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-info collapsed-card p-0">
+                    <div class="card-header">
+                        <a>🌸Blade File</a>
+                
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;">
+                        <div class="codeBox">
+<xmp> 
+    🌸<x-loading-indicator />
+
+</xmp>
+                        </div>
+                    </div>
+                </div>                
+                
+                <div class="card card-info collapsed-card p-0">
+                    <div class="card-header">
+                        <a>🌸Component Blade File</a>
+                
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: none;">
+                        <div class="card card-indigo collapsed-card p-0">
+                            <div class="card-header">
+                                <a>🌸Html</a>
+                        
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                <div class="codeBox">
+<xmp> 
+    🌸<div wire:loading.delay.long>
+        <!-- Align center and more stufs things -->
+        <div style="display: flex; justify-content: center; align-items: center; background-color: rgb(0, 0, 0); position: fixed; top: 0px; left: 0px; z-index: 9999; width: 100%; height: 100%; opacity: 0.8;">
+
+        <!-- Loading Code -->
+        <div class="la-ball-clip-rotate la-2x">
+            <div></div>
+        </div>
+
+        </div>
+    </div>
+
+</xmp>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-indigo collapsed-card p-0">
+                            <div class="card-header">
+                                <a>🌸CSS</a>
+                        
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: none;">
+                                <div class="codeBox">
+<xmp> 
+    🌸@push('styles')
+    <style>
+    /*!
+    * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+    * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+    * Licensed under MIT
+    */
+    .la-ball-clip-rotate,
+    .la-ball-clip-rotate > div {
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    .la-ball-clip-rotate {
+        display: block;
+        font-size: 0;
+        color: #fff;
+    }
+    .la-ball-clip-rotate.la-dark {
+        color: #333;
+    }
+    .la-ball-clip-rotate > div {
+        display: inline-block;
+        float: none;
+        background-color: currentColor;
+        border: 0 solid currentColor;
+    }
+    .la-ball-clip-rotate {
+        width: 32px;
+        height: 32px;
+    }
+    .la-ball-clip-rotate > div {
+        width: 32px;
+        height: 32px;
+        background: transparent;
+        border-width: 2px;
+        border-bottom-color: transparent;
+        border-radius: 100%;
+        -webkit-animation: ball-clip-rotate .75s linear infinite;
+        -moz-animation: ball-clip-rotate .75s linear infinite;
+            -o-animation: ball-clip-rotate .75s linear infinite;
+                animation: ball-clip-rotate .75s linear infinite;
+    }
+    .la-ball-clip-rotate.la-sm {
+        width: 16px;
+        height: 16px;
+    }
+    .la-ball-clip-rotate.la-sm > div {
+        width: 16px;
+        height: 16px;
+        border-width: 1px;
+    }
+    .la-ball-clip-rotate.la-2x {
+        width: 64px;
+        height: 64px;
+    }
+    .la-ball-clip-rotate.la-2x > div {
+        width: 64px;
+        height: 64px;
+        border-width: 4px;
+    }
+    .la-ball-clip-rotate.la-3x {
+        width: 96px;
+        height: 96px;
+    }
+    .la-ball-clip-rotate.la-3x > div {
+        width: 96px;
+        height: 96px;
+        border-width: 6px;
+    }
+    /*
+    * Animation
+    */
+    @-webkit-keyframes ball-clip-rotate {
+        0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+        }
+        50% {
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+        }
+    }
+    @-moz-keyframes ball-clip-rotate {
+        0% {
+            -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+        }
+        50% {
+            -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+        }
+        100% {
+            -moz-transform: rotate(360deg);
+                transform: rotate(360deg);
+        }
+    }
+    @-o-keyframes ball-clip-rotate {
+        0% {
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        50% {
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        100% {
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes ball-clip-rotate {
+        0% {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+        }
+        50% {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                    transform: rotate(180deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                    transform: rotate(360deg);
+        }
+    }
+    </style>
+    @endpush
+
+</xmp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="card collapsed-card p-0">
+        <div class="card-header">
+            <a class="card-title text-dark">🌸Middleware</a>
+    
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-body" style="display: none;">
+            <div class="card card-indigo collapsed-card p-0">
+                <div class="card-header">
+                    <a href="/https://github.com/ShishirBhuiyan/Livewire/commit/521f6bbc05c539d67121771a4e47fa0ca745646b" class="card-title">🌸Create admin role middleware</a>
+            
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: none;">
+                   <ul>
+                       <li>
+                           <p>Crate middleware</p>
+                           <div class="codeBox">
+<xmp>
+    🌸Php artisan make:middleware administrator
+
+    🌸public function handle(Request $request, Closure $next)
+    {
+        if (auth()->check() && auth()->user()->isAdmin()) {
+            return $next($request);
+        }
+        
+        return redirect('/error');
+    }
+    
+</xmp>
+                           </div>
+                       </li>
+                       <li>
+                           <p>Register middleware in kernal.php</p>
+                           <div class="codeBox">
+<xmp>
+    🌸 protected $routeMiddleware = [
+        'admin' => \App\Http\Middleware\Administrator::class,
+    ];
+    
+</xmp>
+                           </div>
+                       </li>
+                       <li>
+                           <p>Use our created administrator middleware in web.php as a admin name. That was defined in kernal.php file</p>
+                           <div class="codeBox">
+<xmp>
+    🌸Route::group(['middleware' => ['auth','admin']],function (){
+        Route::get('admin/dashboard', DashboardController::class)->name('admin.dashboard');
+    }); 
+    
+</xmp>
+                           </div>
+                       </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+ 
   </div><!-- Put Avove -->
 
 
@@ -3197,7 +4273,7 @@
         </div>
         <div class="card-body" style="display: none;">
             <!-- 🌸 install MinGW-w64 -->
-            <div class="card card-info collapsed-card p-0 m-2">
+            <div class="card card-info collapsed-card p-0">
                 <div class="card-header">
                     <a href="https://www.youtube.com/watch?v=0HD0pqVtsmw" class="card-title text-dark">🌸Install MinGW-w64</a>
             
@@ -3267,7 +4343,7 @@
                 </div>
             </div>
             <!-- 🌸 -->
-            <div class="card card-info collapsed-card p-0 m-2">
+            <div class="card card-info collapsed-card p-0">
                 <div class="card-header">
                     <a class="card-title text-dark">🌸Here...</a>
             
