@@ -36,6 +36,7 @@
         <button class="tablinks active" onclick="openCity(event, 'livewire')">Livewire</button>
         <button class="tablinks" onclick="openCity(event, 'reactjs')">REACT JS</button>
         <button class="tablinks" onclick="openCity(event, 'intalation')">Instalation</button>
+        <button class="tablinks" onclick="openCity(event, 'mysql')">Mysql</button>
         <button class="tablinks" onclick="openCity(event, 'login')">
             <i class="fas fa-user-shield"></i>
             Login
@@ -4409,8 +4410,177 @@ font-size: 112px;
             </div>
         </div>
     </div>
+
+    <!-- 🌸Windows Setup -->
+    <div class="card collapsed-card p-0 ">
+        
+        <div class="card-header">
+            <a href="https://www.youtube.com/watch?v=77v-Poud_io" class="card-title" target="_blank">🌸Windows Setup</a>
+    
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card-body" style="display: none;">
+            <div class="codebox">
+                <strong>Download iso file from microsoft :</strong> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;+ Find Create Windows 10 installation media: Click download <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;+ Download rufus : Rufus 3.17 (1.3 MB) <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;+ open rufus : Select ....... <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;+ Selct iso file where you downloaded before <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;+ Shut down pc <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;+ Open pc & continuasly press boot menu (Asus: esc btn, Hp: esc btn) untill prompt Open <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;+ Select new windows setup <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;+ Remove pendrive when restart warning required <br><br><br>
+            </div>
+            <div class="codebox">
+                <strong> Now install required app you needed</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;+ Iobit uninstaller <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;+ Advance system care pro <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;+ Idm  ( Internet download manager )
+                &nbsp;&nbsp;&nbsp;&nbsp;+ Telegram
+                &nbsp;&nbsp;&nbsp;&nbsp;+ winrar
+            </div>
+        </div>
+
+
+    </div>
     
   </div>
+
+
+
+    <!--🌸 Mysql -->
+    <div id="mysql" class="content tabcontent" style="display: block;">
+        <p style="margin-bottom: 15px !important;
+        margin-left: 10px;"><strong >Shishir | Mysql</strong></p>
+
+         <!-- 🌸Essential command -->
+        <div class="card collapsed-card p-0 ">
+            
+            <div class="card-header">
+                <a>🌸Essential command</a>
+        
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body" style="display: none;">
+                <div class="codebox">
+                    <strong>Create Database : </strong> <p>create database databaseName;</p>
+                    <strong>Show Database : </strong> <p>show databases;</p>
+                    <strong>Show Table Details : </strong> <p>desc tablename;</p>
+                    <strong>Show Table Details : </strong> <p>desc tablename;</p>
+                    <strong>DROP TABLE : </strong> <p>DROP TABLE tableName;</p>
+                    <strong>Truncate TABLE : </strong> <p>TRUNCATE TABLE tableName</p>
+                    <strong>Clears the mysql console screen : </strong> <p>mysql> \! clear</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 🌸Create table-->
+        <div class="card collapsed-card p-0 ">
+            
+            <div class="card-header">
+                <a>🌸Create Table</a>
+        
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body" style="display: none;">
+                <div class="codebox">
+                    + Find column data types : <a href="https://www.journaldev.com/16774/sql-data-types">here</a>
+<xmp>
+    CREATE TABLE tableName (
+        autoId int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        anotherAutoid int NOT NULL AUTO_INCREMENT=100,
+
+        personID int,
+        firstName varchar(255),
+        email varchar(255) NOT NULL,
+        fatherName varchar(255) DEFAULT NULL,
+        `photo longblob DEFAULT NULL,
+    );
+</xmp>
+                </div>
+            </div>
+        </div>
+    
+        <!--🌸Select  QAuery-->
+        <div class="card collapsed-card p-0 ">
+            
+            <div class="card-header">
+                <a>🌸Select Query</a>
+        
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body" style="display: none;">
+                <div class="codebox">
+<xmp>
+    🌸 SELECT column_name FROM table_name 
+    WHERE column_name OPERATOR (SELECT column_name FROM table_name WHERE condition);
+
+    🌸 SELECT Name FROM student 
+    WHERE RollNo IN (SELECT RollNo FROM class WHERE section = 'A');
+
+    🌸 SELECT * FROM student 
+    WHERE RollNo IN (SELECT RollNo FROM class WHERE ClassNo>7);
+
+    🌸 query = "SELECT administrator.* FROM administrator, users WHERE administrator.uid = users.uid AND users.uid = '"+usernames+"'";
+
+    🌸 String sql = "DELETE student, users FROM student INNER JOIN users ON student.uid = users.uid WHERE users.uid='"+id+"'";
+
+
+    🌸 String querys = "UPDATE administrator, users SET users.username = ?,users.password = ?, users.token=?,administrator.phone = ?,administrator.email = ? WHERE users.uid = ?";
+
+
+
+    <p><a href="https://www.informit.com/articles/article.aspx?p=2036581&seqNum=11">Essential lInk</a></p>
+    
+</xmp>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!--🌸Alter  QAuery-->
+        <div class="card collapsed-card p-0 ">
+            
+            <div class="card-header">
+                <a>🌸 Alter Query</a>
+        
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body" style="display: none;">
+                <div class="codebox">
+<xmp>
+    🌸 ALTER TABLE table_name ADD column_name datatype;
+    🌸 ALTER TABLE table_name ADD column_name datatype;
+    🌸 ALTER TABLE table_name MODIFY COLUMN column_name datatype;
+    
+</xmp>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
 
          <!-- jQuery -->
